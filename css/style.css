@@ -1,14 +1,514 @@
+/* Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-body{
-    font-family: 'Jost',sans-serif;
-    
+body {
+    font-family: "Jost", sans-serif;
+    color: #1f1a17;
+    background-color: white;
+    line-height: 1.6;
 }
-h1,h2,h3{
-    font-family: 'Cormorant Garamond',serif;
+
+h1, h2, h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
 }
-.logo img{
-    height: 56px;
+
+h1 { font-size: 56px; }
+h2 { font-size: 38px; }
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
-.logo{
-    text-decoration-line: none;
+
+ul { list-style: none; }
+
+img { max-width: 100%; }
+
+.conteneur {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.surtitre {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #8a6238;
+    margin-bottom: 12px;
+}
+
+.visuellement-cache {
+    position: absolute;
+    left: -9999px;
+}
+
+/* Boutons */
+.banniere-bouton,
+.bouton-blanc,
+.bouton-contour {
+    display: inline-block;
+    padding: 14px 26px;
+    font-family: "Jost", sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 1px solid #1f1a17;
+    background-color: transparent;
+    color: #1f1a17;
+    cursor: pointer;
+}
+
+.banniere-bouton:first-child {
+    background-color: #8a6238;
+    border-color: #8a6238;
+    color: white;
+}
+
+.bouton-blanc {
+    background-color: white;
+    border-color: white;
+    color: #8a6238;
+}
+
+.bouton-contour {
+    border-color: #8a6238;
+    color: #8a6238;
+}
+
+/* Annonce */
+.annonce {
+    background-color: #8a6238;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    padding: 8px;
+}
+
+/* Header */
+.entete {
+    background-color: white;
+    border-bottom: 1px solid #e8e1d9;
+}
+
+.entete .conteneur {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.logo-image { height: 38px; }
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+
+.menu a:hover,
+.menu a.actif {
+    color: #8a6238;
+    border-bottom: 1px solid #8a6238;
+}
+
+.bouton-theme {
+    font-family: "Jost", sans-serif;
+    padding: 8px 18px;
+    border: 1px solid #e8e1d9;
+    border-radius: 30px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.bouton-menu {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Bannière */
+.banniere {
+    background-color: #f6efe7;
+    padding: 60px 0;
+}
+
+.banniere .conteneur {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.banniere-texte,
+.banniere-visuel {
+    width: 50%;
+}
+
+.banniere-texte p {
+    margin: 20px 0;
+    color: #6b625b;
+}
+
+.banniere-texte .surtitre {
+    color: #8a6238;
+    margin-bottom: 12px;
+}
+
+.banniere-boutons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Carrousel */
+.carrousel {
+    display: flex;
+    overflow-x: auto;
+}
+
+.plat {
+    min-width: 100%;
+    text-align: center;
+}
+
+.plat img {
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 10px solid white;
+}
+
+.plat figcaption {
+    margin-top: 15px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #6b625b;
+}
+
+.plat figcaption strong {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: none;
+    color: #1f1a17;
+}
+
+.carrousel-controles {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.carrousel-prec,
+.carrousel-suiv {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #e8e1d9;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Points forts */
+.grille-points {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #e8e1d9;
+    padding: 20px 24px;
+    margin-top: 0;
+}
+
+.point {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.point img {
+    width: 24px;
+    height: 24px;
+}
+
+.point h3 {
+    font-family: "Jost", sans-serif;
+    font-size: 15px;
+}
+
+.point p {
+    font-size: 13px;
+    color: #6b625b;
+}
+
+/* Catégories */
+.categories {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.grille-categories {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.categorie img {
+    display: block;
+    margin: 0 auto 12px;
+    width: 108px;
+    height: 108px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #f6efe7;
+}
+
+.categorie span {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.categorie:hover span { color: #8a6238; }
+
+/* Plat du jour */
+.plat-du-jour .conteneur {
+    display: flex;
+}
+
+.plat-du-jour-texte {
+    width: 50%;
+    background-color: #8a6238;
+    color: white;
+    padding: 60px 40px;
+}
+
+.plat-du-jour-texte .surtitre { color: white; }
+
+.plat-du-jour-texte h2 { margin-bottom: 15px; }
+
+.plat-du-jour-texte p { margin-bottom: 25px; }
+
+.plat-du-jour-image {
+    width: 50%;
+    background-color: #f6efe7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plat-du-jour-image img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 10px solid white;
+}
+
+/* Pas d'idée ce soir ? */
+.idee {
+    margin-top: 80px;
+    padding: 30px 24px;
+    border-top: 1px solid #e8e1d9;
+    border-bottom: 1px solid #e8e1d9;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.idee h2 {
+    font-size: 24px;
+    font-style: italic;
+}
+
+#resultat-hasard {
+    width: 100%;
+    text-align: center;
+    color: #8a6238;
+}
+
+/* Restaurants */
+.restaurants { padding: 80px 0; }
+
+.restaurants-entete {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+
+.lien-tout {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #8a6238;
+}
+
+.grille-restos {
+    display: flex;
+    gap: 24px;
+}
+
+.carte-resto {
+    width: 33%;
+    border: 1px solid #e8e1d9;
+}
+
+.carte-resto img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.carte-texte { padding: 20px; }
+
+.carte-cuisine {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #8a6238;
+}
+
+.carte-texte h3 {
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.carte-texte p { color: #6b625b; }
+
+.carte-texte a {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #1f1a17;
+}
+
+/* Footer */
+.pied {
+    background-color: #1f1a17;
+    color: #f3ece4;
+    padding-top: 50px;
+}
+
+.pied-colonnes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pied-colonne { width: 25%; }
+
+.pied .logo-image { margin-bottom: 15px; }
+
+.pied-texte {
+    font-size: 14px;
+    color: #b8aea4;
+}
+
+.pied-titre {
+    font-family: "Jost", sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #d9a566;
+    margin-bottom: 15px;
+}
+
+.pied li { margin-bottom: 8px; }
+
+.pied a:hover { color: #d9a566; }
+
+.pied-copyright {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 20px 24px;
+    border-top: 1px solid #3a312a;
+    font-size: 13px;
+    color: #b8aea4;
+}
+
+/* Pages secondaires */
+.entete-page {
+    background-color: #f6efe7;
+    padding: 50px 0;
+}
+
+/* Thème sombre */
+body.sombre {
+    background-color: #17120f;
+    color: #f3ece4;
+}
+
+body.sombre .entete,
+body.sombre .bouton-theme,
+body.sombre .carte-resto {
+    background-color: #17120f;
+    color: #f3ece4;
+    border-color: #3a312a;
+}
+
+body.sombre .banniere,
+body.sombre .entete-page,
+body.sombre .plat-du-jour-image {
+    background-color: #2a231e;
+}
+
+body.sombre .banniere-texte p,
+body.sombre .point p,
+body.sombre .carte-texte p,
+body.sombre .plat figcaption { color: #b8aea4; }
+
+body.sombre .plat figcaption strong { color: #f3ece4; }
+
+/* Mobile */
+@media (max-width: 800px) {
+    .bouton-menu { display: block; }
+
+    .menu { display: none; }
+    .menu.ouvert {
+        display: block;
+        width: 100%;
+    }
+    .entete .conteneur { flex-wrap: wrap; }
+
+    h1 { font-size: 40px; }
+
+    .banniere .conteneur,
+    .grille-points,
+    .grille-restos,
+    .plat-du-jour .conteneur,
+    .pied-colonnes {
+        flex-direction: column;
+    }
+
+    .banniere-texte,
+    .banniere-visuel,
+    .plat-du-jour-texte,
+    .plat-du-jour-image,
+    .carte-resto,
+    .pied-colonne { width: 100%; }
+
+    .grille-points { gap: 15px; }
+    .grille-categories { flex-wrap: wrap; gap: 20px; }
+    .categorie { width: 30%; }
 }

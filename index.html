@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mboa Kitchen – Saveurs d'Afrique</title>
-    <link rel="stylesheet" href="css/accueil.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap">
@@ -42,21 +41,177 @@
                 </div>
                 <div class="banniere-visuel">
                     <div class="carrousel">
-                        <figure class="plat"> 
-                        <img src="img/plats/eru.jpg" alt="Illustration d'une assiette de cuisine africaine" class="illustration-image">
+                        <figure class="plat">
+                            <img src="img/plats/mafe.jpg" alt="Assiette de mafé">
+                            <figcaption><strong>Mafé</strong> · Sénégal</figcaption>
                         </figure>
                         <figure class="plat">
-                        <img src="img/plats/mokum.jpg" alt="Illustration d'une assiette de cuisine africaine" class="illustration-image">
+                            <img src="img/plats/jollof-rice.jpg" alt="Assiette de jollof rice">
+                            <figcaption><strong>Jollof rice</strong> · Nigeria</figcaption>
                         </figure>
                         <figure class="plat">
-                        <img src="img/plats/ndole.jpg" alt="Illustration d'une assiette de cuisine africaine" class="illustration-image">
+                            <img src="img/plats/ndole.jpg" alt="Assiette de ndolè">
+                            <figcaption><strong>Ndolè</strong> · Cameroun</figcaption>
                         </figure>
-                       </div>
+                        <figure class="plat">
+                            <img src="img/plats/poisson-braise.jpg" alt="Poisson braisé">
+                            <figcaption><strong>Poisson braisé</strong> · Cameroun</figcaption>
+                        </figure>
+                        <figure class="plat">
+                            <img src="img/plats/yassa-au-poulet.jpg" alt="Yassa au poulet">
+                            <figcaption><strong>Yassa au poulet</strong> · Sénégal</figcaption>
+                        </figure>
+                        <figure class="plat">
+                            <img src="img/plats/poulet-dg.jpg" alt="Poulet DG">
+                            <figcaption><strong>Poulet DG</strong> · Cameroun</figcaption>
+                        </figure>
+                        <figure class="plat">
+                            <img src="img/plats/eru.jpg" alt="Eru et water fufu">
+                            <figcaption><strong>Eru</strong> · Cameroun</figcaption>
+                        </figure>
+                    </div>
+                    <div class="carrousel-controles">
+                        <button type="button" class="carrousel-prec" aria-label="Plat précédent">←</button>
+                        <button type="button" class="carrousel-suiv" aria-label="Plat suivant">→</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-</main>
+            </div>
+        </section>
+
+        <!-- 4.3 : les points forts -->
+        <section id="points-forts" class="points-forts">
+            <h2 class="visuellement-cache">Nos points forts</h2>
+            <div class="conteneur grille-points">
+                <div class="point">
+                    <img src="img/icones/book.svg" alt="">
+                    <div>
+                        <h3>Recettes pas à pas</h3>
+                        <p>Expliquées simplement</p>
+                    </div>
+                </div>
+                <div class="point">
+                    <img src="img/icones/map-pin.svg" alt="">
+                    <div>
+                        <h3>Adresses en Île-de-France</h3>
+                        <p>Pour goûter sans cuisiner</p>
+                    </div>
+                </div>
+                <div class="point">
+                    <img src="img/icones/wallet.svg" alt="">
+                    <div>
+                        <h3>Comparateur de budget</h3>
+                        <p>Le bon resto au bon prix</p>
+                    </div>
+                </div>
+                <div class="point">
+                    <img src="img/icones/world.svg" alt="">
+                    <div>
+                        <h3>Afrique centrale et de l'Ouest</h3>
+                        <p>Du Sénégal au Congo</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4.4 : les catégories -->
+        <section id="categories" class="categories">
+            <div class="conteneur">
+                <p class="surtitre">À la carte</p>
+                <h2>Explorer par catégorie</h2>
+                <div class="grille-categories">
+                    <a href="pages/recettes.html" class="categorie">
+                        <img src="img/plats/bissap.jpg" alt="Verre de bissap">
+                        <span>Boissons</span>
+                    </a>
+                    <a href="pages/recettes.html" class="categorie">
+                        <img src="img/plats/akara.jpg" alt="Beignets akara">
+                        <span>Entrées</span>
+                    </a>
+                    <a href="pages/recettes.html" class="categorie">
+                        <img src="img/plats/ndole.jpg" alt="Assiette de ndolè">
+                        <span>Plats</span>
+                    </a>
+                    <a href="pages/recettes.html" class="categorie">
+                        <img src="img/plats/puff-puff.jpg" alt="Puff-puff">
+                        <span>Desserts</span>
+                    </a>
+                    <a href="pages/recettes.html" class="categorie">
+                        <img src="img/plats/alloco.jpg" alt="Alloco">
+                        <span>Végétarien</span>
+                    </a>
+                    <a href="pages/recettes.html" class="categorie">
+                        <img src="img/plats/suya.jpg" alt="Brochettes de suya">
+                        <span>Épices</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4.5 : le plat du jour -->
+        <section id="plat-du-jour" class="plat-du-jour">
+            <div class="conteneur">
+                <div class="plat-du-jour-texte">
+                    <p class="surtitre">Le plat du jour</p>
+                    <h2>Le ndolè,<br><em>fierté du Cameroun</em></h2>
+                    <p>Feuilles de ndolè mijotées avec arachides et crevettes, servies avec du plantain mûr.</p>
+                    <a href="pages/recettes.html" class="bouton-blanc">Voir la recette</a>
+                </div>
+                <div class="plat-du-jour-image">
+                    <img src="img/plats/ndole.jpg" alt="Plat de ndolè au plantain">
+                </div>
+            </div>
+        </section>
+
+        <!-- 4.6 : « Pas d'idée ce soir ? » -->
+        <section id="idee" class="idee">
+            <h2>Pas d'idée ce soir ?</h2>
+            <button type="button" id="bouton-hasard" class="bouton-contour">Je ne sais pas quoi manger</button>
+            <p id="resultat-hasard" aria-live="polite"></p>
+        </section>
+
+        <!-- 4.7 : l'aperçu des restaurants -->
+        <section id="restaurants" class="restaurants">
+            <div class="conteneur">
+                <div class="restaurants-entete">
+                    <div>
+                        <p class="surtitre">Nos adresses</p>
+                        <h2>Goûter sans cuisiner</h2>
+                    </div>
+                    <a href="pages/restaurants.html" class="lien-tout">Voir tout →</a>
+                </div>
+                <div class="grille-restos">
+                    <article class="carte-resto">
+                        <img src="img/plats/ndole.jpg" alt="Plat camerounais du restaurant Le Bois d'Ébène">
+                        <div class="carte-texte">
+                            <p class="carte-cuisine">Cuisine camerounaise</p>
+                            <h3>Le Bois d'Ébène</h3>
+                            <p>4 rue André del Sarte · Paris 18e</p>
+                            <a href="pages/restaurants.html">Voir la fiche</a>
+                        </div>
+                    </article>
+                    <article class="carte-resto">
+                        <img src="img/plats/yassa-au-poulet.jpg" alt="Plat sénégalais du restaurant Le Petit Dakar">
+                        <div class="carte-texte">
+                            <p class="carte-cuisine">Cuisine sénégalaise</p>
+                            <h3>Le Petit Dakar</h3>
+                            <p>6 rue Elzévir · Paris 3e</p>
+                            <a href="pages/restaurants.html">Voir la fiche</a>
+                        </div>
+                    </article>
+                    <article class="carte-resto">
+                        <img src="img/plats/alloco.jpg" alt="Plat ivoirien du restaurant Ohinéné">
+                        <div class="carte-texte">
+                            <p class="carte-cuisine">Cuisine ivoirienne</p>
+                            <h3>Ohinéné</h3>
+                            <p>14 rue de la Chine · Paris 20e</p>
+                            <a href="pages/restaurants.html">Voir la fiche</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
 <footer class="pied" >
     <div class="conteneur pied-colonnes">
        <div class="pied-colonne">
