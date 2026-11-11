@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script  defer src="../javascript/recettes.js"></script>
+</head>
+<body>
+     <div class="annonce"><a href="pages/budget.html">Nouveau : comparez les restaurants selon votre budget</a> </div>
+<header class="entete">
+    <div class="conteneur">
+        <a href="index.html" class="logo"><img src="../img/logo/logo-mboa-clair.png" alt="Mboa Kitchen, saveurs d'Afrique" class="logo-image"></a>
+        <button type="button" class="bouton-menu" aria-label="ouvrir le menu" aria-expanded="false" >☰</button>
+        <nav aria-label="navigation principale">
+            <ul class="menu">
+                <li><a href="index.html" class="actif" aria-current="page">Accueil</a></li>
+                <li><a href="pages/recettes.html">Recettes</a></li>
+                <li><a href="pages/restaurants.html">Restaurants</a></li>   
+                <li><a href="pages/budget.html">Budget</a></li>   
+                <li><a href="pages/marche.html">Le Marché</a></li>   
+                <li><a href="pages/a-propos.html">À propos</a></li>   
+            </ul>
+        </nav>
+        <button type="button" class="bouton-theme" aria-label="changer le thème">Thème sombre ☾</button>
+    </div>
+</header>
+    <main>
+        <section class="intro">
+            <div class="conteneur">
+                <p class="surtitre">Des plats d'Afrique centrale et de l'Ouest, expliqués pas à pas. Filtrez par pays, puis choisissez une recette pour voir les ingrédients et les étapes.</p>
+                <h1>Cuisinez l'Afrique chez vous</h1>
+            </div>
+        </section>
+        <section id="filtres" class="conteneur filtres">
+            <h2 class="visuellement-cache">Filtrer les recettes</h2>
+            <div class="filtre-pays">
+                <button type="button" class="filtre actif" aria-pressed="true">Tous</button>
+                <button type="button" class="filtre " aria-pressed="false" data-pays=Cameroun">Cameroun</button>
+                <button type="button" class="filtre " aria-pressed="false" data-pays="Sénégal" >Sénégal</button>
+                <button type="button" class="filtre " aria-pressed="false"data-pays="Côte d'Ivoire">Côte d'Ivoire</button>
+                <button type="button" class="filtre " aria-pressed="false" data-pays="">Nigeria</button>
+                <button type="button" class="filtre " aria-pressed="false" data-pays="">RD Congo</button>
+                </div>
+                <label class="filtre-vege">
+                  <input type="checkbox"  id="filtre-vege">Végétarien uniquement
+                </label>
+        </section>
+        <section id="Liste" class="conteneur">
+            <h2 class="visuellement-cache">Liste des recettes</h2>
+            <div id="grille-recettes" class="grille-recettes">
+                <p id="aucune-recette" hidden>Aucune recette ne correspond à ces filtres pour l'instant </p>
+            </div>
+        </section>
+        <section id="fiche" class="fiche">
+            <div class="conteneur fiche-contenu"> 
+                <img id="fiche-image" src="../img/plats/ndole.jpg" alt="">
+            </div>
+            <div class="fiche-texte">
+                <p id="fiche-pays" class="surtitre"></p>
+                <h2 id="fiche-nom"></h2>
+                <p id="fiche-description"></p>
+                <p id="fiche-infos" class="fiche-infos">temps et piment</p>
+                <div class="portions">Portions</div>
+                <button type="button" id="moins" arial-label="Une portion de moins">-</button>
+                <span id="nb-portions">4</span>
+                <button type="button" id="plus" aria-label="Une portion de plus">+</button>
+                <table class="table-ingredients">
+                    <caption>Ingrédients</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Ingrédients</th>
+                             <th scope="col">Quantité</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <h3>Etapes</h3>
+                <ol id="fiche-etapes"></ol>
+            </div>
+        </section>
+        <section id="proposer" class="conteneur proposer">
+            <h2>Proposer votre recette</h2>
+            <p>Un plat de famille à partager? Envoyez-le, il sera peut-être le prochain plat du jour.</p>
+        <form id="form-recette" novalidate></form>
+        <div class="champ"> 
+            <textarea class="champ champ-large"></textarea>
+            <label for="proposer" ></label>
+        </div>
+        </section>
+        <select>
+            <option value="">Chosir un pays</option>
+            <option value="Cameroun" >Cameroun</option>
+            <option value="Côte d'Ivoire">Côte d'Ivoire</option>
+            <option value="Sénégal">Sénégal</option>
+            <option value="Autre">Autre</option>
+        </select>
+        <button type="submit" class="bouton-plein">Envoyer ma recette</button>
+        <p id="message-form" aria-live="polite"></p>
+    </main>
+    <footer class="pied" >
+    <div class="conteneur pied-colonnes">
+       <div class="pied-colonne">
+        <a href="index.html" class="pied-logo"><img src="../img/logo/logo-mboa-sombre.png" alt="Mboa Kitchen" class="logo-image"> </a>
+        <p class="pied-texte">La cuisine africaine, de la recette à la table.</p>
+       </div>
+       <div class="pied-colonne">
+        <h2 class="pied-titre">Le site</h2>
+        <ul>
+            <li><a href="pages/recettes.html">Recettes</a></li>
+            <li><a href="pages/restaurants.html">Restaurants</a></li>
+            <li><a href="pages/budget.html">Comparateur </a></li>
+        </ul>
+       </div>
+       <div class="pied-colonne">
+        <h2 class="pied-titre">Nous</h2>
+        <ul>
+            <li><a href="pages/a-propos.html">À propos</a></li>
+            <li><a href="pages/a-propos.html#equipe">L'équipe </a></li>
+            <li><a href="pages/a-propos.html#contact">Contact</a></li>
+
+        </ul>
+       </div>
+       <div class="pied-colonne">
+        <h2 class="pied-titre">Le Marché</h2>
+        <ul>
+            <li><a href="pages/marche.html">lexique</a></li>
+            <li><a href="pages/marche.html">acheter</a></li>                
+            <li><a href="pages/marche.html">agenda</a></li>
+        </ul>
+       </div>
+    </div>
+           <p class="pied-copyright">&copy; 2026 Mboa Kitchen · Projet étudiant Efrei Paris </p>
+</footer>    
+</body>
+</html>

@@ -1,0 +1,183 @@
+{
+  "nom": "Ndolé",
+  "pays": "Cameroun",
+  "temps": "2 h",
+  "piment": 2,
+  "vege": false,
+  "image": "ndole.jpg",
+  "description": "Le plat national camerounais : feuilles de ndolè mijotées avec arachides et crevettes, servi avec du plantain.",
+  "ingredients": [
+    { "nom": "Feuilles de ndolè", "quantite": 500, "unite": "g" },
+   {"nom":"Arachides crues","quantite":300,"unite":""},
+   {"nom":"Crevettes","quantite":300,"unite":""},
+   {"nom":"Boeuf","quantite":400,"unite":"g"},
+   {"nom":"Oignins","quantite":2,"unite":""},
+   {"nom":"Plantains mûrs","quantite":"4","unite":""}
+
+  ],
+  "etapes": [
+    "Laver les feuilles de ndolè pour enlever leur amertume.",
+    "Cuire les arachides, les mixer en pâte, puis y ajouter la viande et les feuilles.",
+    "Finir avec les crevettes et servir avec le plantain."
+]
+}
+{
+  "nom": "Poulet DG",
+  "pays": "Cameroun",
+  "temps": "1h30",
+  "piment": 1,
+  "vege": false,
+  "image": "poulet-dg.jpg",
+  "description": "Le « poulet du directeur général » : poulet sauté avec plantains frits et légumes colorés.",
+  "ingredients": [
+    { "nom": "Poulet", "quantite": 1, "unite": "kg" },
+    {"nom":"Plantains mûrs","quantite":4,"unite":""},
+    {"nom":" Carottes ","quantite":3,"unite":""},
+    {"nom":"Haricots verts","quantite":200,"unite":"g",},
+    {"nom":"Poivrons","quantite":2,"unite":""},
+    {"nom":"Tomtes","quantite":3,"unite":""},
+    
+  ],
+  "etapes": [
+    "Faire dorer le poulet découpé",
+    "Frire les plantains en rondelles. ",
+    "Sauter les légumes, ajouter le poulet et les plantains et laisser mijoter."
+  ]
+}
+{
+  "nom": "Mafé",
+  "pays": "Sénégal",
+  "temps": "1 h",
+  "piment": 2,
+  "vege": false,
+  "image": "mafe.jpg",
+  "description": "Ragoût de viande dans une sauce onctueuse à la pâte d'arachide, servi avec du riz blanc.",
+  "ingredients": [
+    { "nom": "Bœuf ", "quantite": 600, "unite": "g" },
+     { "nom": "Pâte d'arachide", "quantite": 200, "unite": "g" },
+      { "nom": " Oignons", "quantite": 2, "unite": "" },
+       { "nom": "Tomates", "quantite": 3, "unite": "" },
+        { "nom": "Carrotes", "quantite": 3, "unite": "" },
+         { "nom": "Patate douce", "quantite": 1, "unite": "" },
+          
+  "etapes": [
+    "Faire revenir la viande et les oignons. ",
+    "Ajouter les tomates, la pâte d'arachide délayée et de l'eau. ",
+    "Laisser mijoter avec les légumes jusqu'à ce que la sauce épaississe.",
+    
+    
+  ]
+}
+{
+  "nom": "Yassa au poulet ",
+  "pays": "Sénégal ",
+  "temps": "1 h15",
+  "piment": 2,
+  "vege": false,
+  "image": "yassa-au-poulet.jpg",
+  "description": "Poulet mariné au citron et à la moutarde, fondu dans beaucoup d'oignons caramélisés.",
+  "ingredients": [
+    { "nom": "Cuisses de poulet", "quantite": 6, "unite": "" },
+    { "nom": "Oignons", "quantite":6 , "unite": "" },
+    { "nom": "Citrons", "quantite": 4, "unite": "" },
+    { "nom": "Moutarde", "quantite": 2, "unite": "c.à.s" },
+    { "nom": "Riz", "quantite":400 , "unite": "g" },
+    
+  ],
+  "etapes": [
+    "Mariner le poulet avec citron moutarde et oignons émincés.",
+    " Griller le poulet puis faire fondre les oignons de la marinade. ",
+    "Réunir le tout et laisser mijoter ; servir avec du riz.",
+    
+  ]
+}
+{
+  "nom": "Attiéké poisson braisé",
+  "pays": "Côte d'Ivoire ",
+  "temps": "45 min",
+  "piment": 3,
+  "vege": false,
+  "image": "poisson-braise.jpg",
+  "description": "Semoule de manioc fermentée, accompagnée de poisson grillé et d'une sauce tomate-oignon pimentée.",
+  "ingredients": [
+    { "nom": "Attiéké ", "quantite": 600, "unite": "g" },
+    { "nom": "Tilapia ", "quantite": 2, "unite": "" },
+    { "nom": "Tomates", "quantite": 3, "unite": "" },
+    { "nom": "Oignons", "quantite": 2, "unite": "" },
+     { "nom": "Piment", "quantite": 1, "unite": "" },
+      { "nom": "Citrons", "quantite": 2, "unite": "" },
+    
+  ],
+  "etapes": [
+    "Mariner le poisson avec citron, ail et épices.",
+    "Le griller à la braise ou au four. ",
+    " Réchauffer l'attiéké à la vapeur et servir avec la sauce crue.",
+  ]
+}
+{
+  "nom": "Alloco",
+  "pays": "Côte d'Ivoire",
+  "temps": "20 min ",
+  "piment": 1,
+  "vege": true ,
+  "image": "alloco.jpg",
+  "description": "Bananes plantain bien mûres frites, à manger seules ou avec une sauce pimentée.",
+  "ingredients": [
+    { "nom": "Plantains bien mûrs ", "quantite": 4, "unite": "" },
+    {"nom": "Huile de friture ", "quantite": 500, "unite": "ml "},
+    {"nom":"Oignon","quantite": 1 ,"unite":""},
+    {"nom":"Piment","quantite":1 ,"unite":""},
+    {"nom":"Sel","quantite":1 ,"unite":"pincée"},
+    
+  ],
+  "etapes": [
+    "Éplucher les plantains et les couper en rondelles.",
+    " Les frire jusqu'à ce qu'ils soient bien dorés.",
+    "Égoutter, saler et servir avec la sauce oignon-piment.",
+  ]
+}
+{
+  "nom": "Jollof rice ",
+  "pays": "Nigeria",
+  "temps": "1 h",
+  "piment": 3,
+  "vege": false,
+  "image": "jollof-rice.jpg",
+  "description": "Riz cuit dans une sauce tomate et poivron épicée, souvent servi avec du poulet.",
+  "ingredients": [
+    { "nom": "Riz long ", "quantite": 400, "unite": "g" },
+     { "nom": "Tomates", "quantite":4 , "unite": "" },
+      { "nom": "Poivrons rouges", "quantite":2 , "unite": "" },
+       { "nom": "Oignons", "quantite":2 , "unite": "" },
+        { "nom": "Poulet", "quantite":600 , "unite": "g" },
+        { "nom": "Bouillon ", "quantite":600 , "unite": "ml" },
+    
+  ],
+  "etapes": [
+    "Mixer tomates, poivrons et oignon, puis faire réduire la sauce.",
+    "Ajouter le riz et le bouillon, couvrir et cuire à feu doux. ",
+    " Servir avec le poulet grillé ou frit.",
+  ]
+}
+{
+  "nom": "Poulet moambe",
+  "pays": "· RD Congo",
+  "temps": "1 h",
+  "piment": 1,
+  "vege": false,
+  "image": "poulet-moambe.jpg",
+  "description": "Le plat national congolais : poulet mijoté dans une sauce onctueuse à la noix de palme.",
+  "ingredients": [
+    { "nom": "Poulet", "quantite": 1, "unite": "" },
+    { "nom": "Sauce moambe ", "quantite": 400, "unite": "g" },
+    { "nom": "Oignon ", "quantite": 1, "unite": "" },
+    { "nom": "Tomates ", "quantite": 2, "unite": "" },
+    { "nom": "Gousses d'ail ", "quantite": 3, "unite": "" },
+    { "nom": "Piment", "quantite": 1, "unite": "" },
+  ],
+  "etapes": [
+    "Faire dorer le poulet assaisonné.",
+    "Ajouter l'oignon et les tomates, puis la sauce moambe délayée dans l'eau chaude.",
+    "Laisser mijoter 45 minutes à feu doux et servir avec du riz.",
+  ]
+}
