@@ -21,6 +21,7 @@
     "Finir avec les crevettes et servir avec le plantain."
 ]
 }
+
 {
   "nom": "Poulet DG",
   "pays": "Cameroun",
@@ -52,7 +53,7 @@
   "vege": false,
   "image": "mafe.jpg",
   "description": "Ragoût de viande dans une sauce onctueuse à la pâte d'arachide, servi avec du riz blanc.",
-  "ingredients": [
+  "ingredients": 
     { "nom": "Bœuf ", "quantite": 600, "unite": "g" },
      { "nom": "Pâte d'arachide", "quantite": 200, "unite": "g" },
       { "nom": " Oignons", "quantite": 2, "unite": "" },
