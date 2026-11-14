@@ -15,6 +15,7 @@ body {
 h1, h2, h3 {
     font-family: "Cormorant Garamond", serif;
     font-weight: 500;
+    line-height: 1.1;
 }
 
 h1 { font-size: 56px; }
@@ -27,12 +28,21 @@ a {
 
 ul { list-style: none; }
 
-img { max-width: 100%; }
+img {
+    max-width: 100%;
+    display: block;
+}
 
 .conteneur {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
+}
+
+/* Élément sélectionné au clavier (touche Tab) */
+:focus-visible {
+    outline: 2px solid #8a6238;
+    outline-offset: 3px;
 }
 
 .surtitre {
@@ -79,6 +89,19 @@ img { max-width: 100%; }
 .bouton-contour {
     border-color: #8a6238;
     color: #8a6238;
+}
+
+.bouton-plein {
+    display: inline-block;
+    padding: 14px 26px;
+    font-family: "Jost", sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 1px solid #8a6238;
+    background-color: #8a6238;
+    color: white;
+    cursor: pointer;
 }
 
 /* Annonce */
@@ -173,15 +196,22 @@ img { max-width: 100%; }
     gap: 15px;
 }
 
-/* Carrousel */
+/* Carrousel : 5 positions posées par le JavaScript (classes actif, gauche, droite, loin-gauche, loin-droite) */
 .carrousel {
-    display: flex;
-    overflow-x: auto;
+    position: relative;
+    height: 380px;
+    overflow: hidden;
 }
 
 .plat {
-    min-width: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 280px;
+    margin: 0 0 0 -140px;
     text-align: center;
+    opacity: 0;
+    transition: transform 0.8s ease, opacity 0.8s ease;
 }
 
 .plat img {
@@ -193,6 +223,15 @@ img { max-width: 100%; }
     border-radius: 50%;
     border: 10px solid white;
 }
+
+.plat.actif { opacity: 1; transform: translateX(0) scale(1); z-index: 3; }
+.plat.gauche { opacity: 0.8; transform: translateX(-200px) scale(0.5); z-index: 2; }
+.plat.droite { opacity: 0.8; transform: translateX(200px) scale(0.5); z-index: 2; }
+.plat.loin-gauche { opacity: 0.4; transform: translateX(-380px) scale(0.35); z-index: 1; }
+.plat.loin-droite { opacity: 0.4; transform: translateX(380px) scale(0.35); z-index: 1; }
+
+.plat figcaption { opacity: 0; transition: opacity 0.8s ease; }
+.plat.actif figcaption { opacity: 1; }
 
 .plat figcaption {
     margin-top: 15px;
@@ -511,4 +550,11 @@ body.sombre .plat figcaption strong { color: #f3ece4; }
     .grille-points { gap: 15px; }
     .grille-categories { flex-wrap: wrap; gap: 20px; }
     .categorie { width: 30%; }
+}
+
+/* Carrousel sur téléphone */
+@media (max-width: 800px) {
+    .carrousel { height: 330px; }
+    .plat.loin-gauche,
+    .plat.loin-droite { opacity: 0; }
 }
