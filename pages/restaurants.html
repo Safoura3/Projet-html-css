@@ -33,13 +33,44 @@
     </header>
 
     <main>
+        <section class="entete-page">
+            <div class="conteneur">
+                <p class="surtitre">Nos adresses</p>
+                <h1>Goûter l'Afrique<br><em>en Île-de-France</em></h1>
+                <p class="entete-page-texte">Une sélection de restaurants africains à Paris, pour savourer les plats de nos recettes sans passer derrière les fourneaux.</p>
+            </div>
+        </section>
 
+        <section id="liste-restaurants" class="conteneur section-restos">
+            <h2 class="visuellement-cache">Liste des restaurants</h2>
+
+            <div class="barre-filtres">
+                <div class="filtres-cuisine">
+                    <button type="button" class="filtre-cuisine actif" data-cuisine="Toutes" aria-pressed="true">Toutes</button>
+                    <button type="button" class="filtre-cuisine" data-cuisine="Camerounaise" aria-pressed="false">Camerounaise</button>
+                    <button type="button" class="filtre-cuisine" data-cuisine="Sénégalaise" aria-pressed="false">Sénégalaise</button>
+                    <button type="button" class="filtre-cuisine" data-cuisine="Ivoirienne" aria-pressed="false">Ivoirienne</button>
+                    <button type="button" class="filtre-cuisine" data-cuisine="Autres" aria-pressed="false">Autres</button>
+                </div>
+                <p id="compte-restos" class="compte-restos" aria-live="polite"></p>
+            </div>
+
+            <div id="grille-restaurants" class="grille-restaurants"></div>
+            <p id="aucun-resto" class="aucun-resto" hidden>Aucun restaurant ne correspond à ce filtre pour l'instant.</p>
+        </section>
+
+        <section class="bandeau-budget">
+            <div class="conteneur">
+                <p>Vous êtes plusieurs ? Trouvez l'adresse qui tient dans votre budget.</p>
+                <a href="budget.html" class="bouton-blanc">Comparer les prix</a>
+            </div>
+        </section>
     </main>
 
     <footer class="pied">
         <div class="conteneur pied-colonnes">
             <div class="pied-colonne">
-                <a href="../index.html" class="pied-logo"><img src="../img/logo/logo-mboa-sombre.png" alt="Mboa Kitchen, retour à l'accueil"></a>
+                <a href="../index.html" class="pied-logo"><img src="../img/logo/logo-mboa-sombre.png" alt="Mboa Kitchen, retour à l'accueil" class="logo-image"></a>
                 <p class="pied-texte">La cuisine africaine, de la recette à la table.</p>
             </div>
             <div class="pied-colonne">
