@@ -512,3 +512,180 @@ body.sombre .plat figcaption strong { color: #f3ece4; }
     .grille-categories { flex-wrap: wrap; gap: 20px; }
     .categorie { width: 30%; }
 }
+/*pages recettes*/
+.intro{
+    background-color: var(--fond-doux);
+padding: 56px 0;}
+.intro h1{
+        font-size:48px;
+        margin: 0 0 12px;
+    }
+.intro p{
+    max-width:620px;
+    color: var(--texte-doux);
+}
+.filtres{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+.filtre{
+    min-height:40px;
+    padding: 0 18px;
+    border: 1px solid var(--trait);
+    border-radius:20px;
+    background-color:transparent;
+    color: var(--texte);
+    font-family: inherit;
+    font-size:14px;
+    cursor: pointer;
+}
+.filtre.actif{
+    background-color:var(--texte);
+    border-color:var(--accent);
+    color:var(--sur-accent);
+}
+.filtre-vege{
+    display: flex;
+    align-items: center;
+    gap:8px;
+    cursor: pointer;
+}
+.grille-recettes{ 
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+    gap :24px;
+    padding:0;
+    border: 1px solid var(--trait);
+    background-color:var(--fond);
+    color: var(--texte);
+    font-family: inherit;
+    text-align:left;
+    cursor:pointer;
+    transition:transform 0.3s ease;
+    }
+.carte-recette:hover{
+     transform: translateY(-4px);
+}
+.carte-recette img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+}
+.carte-recette h3{
+    font-size: 24px;
+    margin : 14px 16px 4px;
+font-size: 14px; 
+color:var(--texte-doux);
+}
+.fiche{
+    background-color: var(--fond-doux);
+    padding: 56px 0;
+}
+.fiche-contenu{
+    display: flex;
+    flex-wrap:wrap;
+    gap:40px;
+    align-items:flex-start;
+}
+#fiche-image{
+    flex: 1 1 300px;
+    max-width: 420px;
+    aspect-ratio: 1/1;
+    object-fit:cover;
+    border-radius:50%;
+}
+.fiche h2{
+    font-size:44px;
+    margin:0 0 12px;
+}
+.fiche-infos{
+    color: var(--accent);
+}
+.portions{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin: 20px 0;
+}
+.portions button{
+    width: 36px;
+    height:36px;
+    border-radius:50%;
+    border:1px solid var(--trait);
+    background-color:var(--fond);
+    color:var(--texte);
+    font-size:18px;
+    cursor : pointer;
+}
+#nb-portions{
+    min-width:24px;
+    text-align:center;
+    font-weight:500;
+}
+.table-ingredients{
+    width:100%;
+    border-collapse:collapse;
+    }
+
+.table-ingredients caption{text-align:left;
+    font-family:var(--police-titre);
+font-size: 24px;
+margin-bottom:8px;
+}
+.table-ingredients th, .table-ingredients td{
+text-align: left;
+padding: 10px 8px;
+border-bottom: 1px solid var(--trait);
+}
+th{
+    font-size: 12px;
+    letter-spacing:0.15em;
+    text-transform: uppercase;
+    color:var(--texte-doux);
+}
+#fiche-etapes{
+    padding-left:20px;
+}
+#fiche-etapes li{
+    margin-bottom: 10px;
+} 
+.proposer{
+    padding-top: 64px ;
+    padding-bottom:64px;
+    max-width :720px;
+}
+#form-recette{
+display:grid;
+grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+gap:18px;
+}
+.champ{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+.champ label{
+    font-size:13px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+}
+.champ input,.champ select,.champ textarea{
+    padding:12px;
+    border:1px solid var(--trait);
+    background-color:var(--fond);
+    color: var(--texte);
+    font-family:inherit;
+    font-size:16px;
+}
+.champ-large,#form-recette button,#message-form{
+    grid-column: 1/-1;
+}
+.champ .invalide{
+    border-color:#B3261E;
+    #message-form.erreur{
+        color:#B3261E ;
+}
+#message-form.succes{
+    color:var(--accent);
+}}

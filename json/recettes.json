@@ -1,4 +1,4 @@
-{
+[{
   "nom": "Ndolé",
   "pays": "Cameroun",
   "temps": "2 h",
@@ -20,7 +20,7 @@
     "Cuire les arachides, les mixer en pâte, puis y ajouter la viande et les feuilles.",
     "Finir avec les crevettes et servir avec le plantain."
 ]
-}
+},
 {
   "nom": "Poulet DG",
   "pays": "Cameroun",
@@ -33,17 +33,16 @@
     { "nom": "Poulet", "quantite": 1, "unite": "kg" },
     {"nom":"Plantains mûrs","quantite":4,"unite":""},
     {"nom":" Carottes ","quantite":3,"unite":""},
-    {"nom":"Haricots verts","quantite":200,"unite":"g",},
+    {"nom":"Haricots verts","quantite":200,"unite":"g"},
     {"nom":"Poivrons","quantite":2,"unite":""},
-    {"nom":"Tomtes","quantite":3,"unite":""},
-    
-  ],
+    {"nom":"Tomates","quantite":3,"unite":""}
+    ],
   "etapes": [
     "Faire dorer le poulet découpé",
     "Frire les plantains en rondelles. ",
     "Sauter les légumes, ajouter le poulet et les plantains et laisser mijoter."
   ]
-}
+},
 {
   "nom": "Mafé",
   "pays": "Sénégal",
@@ -58,19 +57,17 @@
       { "nom": " Oignons", "quantite": 2, "unite": "" },
        { "nom": "Tomates", "quantite": 3, "unite": "" },
         { "nom": "Carrotes", "quantite": 3, "unite": "" },
-         { "nom": "Patate douce", "quantite": 1, "unite": "" },
-          
+         { "nom": "Patate douce", "quantite": 1, "unite": "" }
+  ],
   "etapes": [
     "Faire revenir la viande et les oignons. ",
     "Ajouter les tomates, la pâte d'arachide délayée et de l'eau. ",
-    "Laisser mijoter avec les légumes jusqu'à ce que la sauce épaississe.",
-    
-    
-  ]
-}
+    "Laisser mijoter avec les légumes jusqu'à ce que la sauce épaississe."
+    ]
+},
 {
   "nom": "Yassa au poulet ",
-  "pays": "Sénégal ",
+  "pays": "Sénégal",
   "temps": "1 h15",
   "piment": 2,
   "vege": false,
@@ -81,19 +78,19 @@
     { "nom": "Oignons", "quantite":6 , "unite": "" },
     { "nom": "Citrons", "quantite": 4, "unite": "" },
     { "nom": "Moutarde", "quantite": 2, "unite": "c.à.s" },
-    { "nom": "Riz", "quantite":400 , "unite": "g" },
+    { "nom": "Riz", "quantite":400 , "unite": "g" }
     
   ],
   "etapes": [
     "Mariner le poulet avec citron moutarde et oignons émincés.",
     " Griller le poulet puis faire fondre les oignons de la marinade. ",
-    "Réunir le tout et laisser mijoter ; servir avec du riz.",
+    "Réunir le tout et laisser mijoter ; servir avec du riz."
     
   ]
-}
+},
 {
   "nom": "Attiéké poisson braisé",
-  "pays": "Côte d'Ivoire ",
+  "pays": "Côte d'Ivoire",
   "temps": "45 min",
   "piment": 3,
   "vege": false,
@@ -105,15 +102,15 @@
     { "nom": "Tomates", "quantite": 3, "unite": "" },
     { "nom": "Oignons", "quantite": 2, "unite": "" },
      { "nom": "Piment", "quantite": 1, "unite": "" },
-      { "nom": "Citrons", "quantite": 2, "unite": "" },
+      { "nom": "Citrons", "quantite": 2, "unite": "" }
     
   ],
   "etapes": [
     "Mariner le poisson avec citron, ail et épices.",
     "Le griller à la braise ou au four. ",
-    " Réchauffer l'attiéké à la vapeur et servir avec la sauce crue.",
+    " Réchauffer l'attiéké à la vapeur et servir avec la sauce crue."
   ]
-}
+},
 {
   "nom": "Alloco",
   "pays": "Côte d'Ivoire",
@@ -127,15 +124,15 @@
     {"nom": "Huile de friture ", "quantite": 500, "unite": "ml "},
     {"nom":"Oignon","quantite": 1 ,"unite":""},
     {"nom":"Piment","quantite":1 ,"unite":""},
-    {"nom":"Sel","quantite":1 ,"unite":"pincée"},
+    {"nom":"Sel","quantite":1 ,"unite":"pincée"}
     
   ],
   "etapes": [
     "Éplucher les plantains et les couper en rondelles.",
     " Les frire jusqu'à ce qu'ils soient bien dorés.",
-    "Égoutter, saler et servir avec la sauce oignon-piment.",
+    "Égoutter, saler et servir avec la sauce oignon-piment."
   ]
-}
+},
 {
   "nom": "Jollof rice ",
   "pays": "Nigeria",
@@ -150,18 +147,18 @@
       { "nom": "Poivrons rouges", "quantite":2 , "unite": "" },
        { "nom": "Oignons", "quantite":2 , "unite": "" },
         { "nom": "Poulet", "quantite":600 , "unite": "g" },
-        { "nom": "Bouillon ", "quantite":600 , "unite": "ml" },
+        { "nom": "Bouillon ", "quantite":600 , "unite": "ml" }
     
   ],
   "etapes": [
     "Mixer tomates, poivrons et oignon, puis faire réduire la sauce.",
     "Ajouter le riz et le bouillon, couvrir et cuire à feu doux. ",
-    " Servir avec le poulet grillé ou frit.",
+    " Servir avec le poulet grillé ou frit."
   ]
-}
+},
 {
   "nom": "Poulet moambe",
-  "pays": "· RD Congo",
+  "pays": "RD Congo",
   "temps": "1 h",
   "piment": 1,
   "vege": false,
@@ -173,11 +170,11 @@
     { "nom": "Oignon ", "quantite": 1, "unite": "" },
     { "nom": "Tomates ", "quantite": 2, "unite": "" },
     { "nom": "Gousses d'ail ", "quantite": 3, "unite": "" },
-    { "nom": "Piment", "quantite": 1, "unite": "" },
+    { "nom": "Piment", "quantite": 1, "unite": "" }
   ],
   "etapes": [
     "Faire dorer le poulet assaisonné.",
     "Ajouter l'oignon et les tomates, puis la sauce moambe délayée dans l'eau chaude.",
-    "Laisser mijoter 45 minutes à feu doux et servir avec du riz.",
+    "Laisser mijoter 45 minutes à feu doux et servir avec du riz."
   ]
-}
+}]
