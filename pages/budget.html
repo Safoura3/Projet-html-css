@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -5,156 +6,207 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Composez votre menu de la semaine avec Mboa Kitchen : découvrez les saveurs africaines, organisez vos repas et maîtrisez votre budget.">
+    <meta name="description" content="Organisez vos repas africains et maîtrisez votre budget avec le calculateur Mboa Kitchen.">
 
-    <meta name="theme-color" content="#f8f5ef">
+    <title>Calculateur de budget | Mboa Kitchen</title>
 
-    <title>Mon budget gourmand | Mboa Kitchen</title>
-
-    <!-- POLICES -->
+    <!-- Polices -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- FEUILLES DE STYLE -->
+    <!-- Feuilles de style -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/budget.css">
 
-    <!-- JAVASCRIPT -->
-    <script src="../javascript/formulaire.js" defer></script>
-    <script src="../javascript/budget.js" defer></script>
-
-
+    
+    <link rel="icon" href="../img/logo/logo-mboa-clair.png">
     <script src="../javascript/menu.js" defer></script>
     <script src="../javascript/theme.js" defer></script>
+    <script src="../javascript/budget.js" defer></script>
 
 </head>
 
-<body>
+<body class="page-budget">
 
-    <!-- LIEN D'ACCESSIBILITÉ -->
-    <a href="#contenu-principal" class="lien-accessibilite">
-        Aller au contenu principal
-    </a>
+    <!-- =====================================
+         BARRE D'ANNONCE
+    ====================================== -->
 
-
-    <!-- BANDEAU D'ANNONCE -->
     <div class="annonce">
         <a href="budget.html">
-            Mieux manger, mieux choisir, mieux gérer son budget
+            Nouveau : comparez les restaurants selon votre budget
         </a>
     </div>
 
 
-    <!-- HEADER COMMUN -->
-    <header class="entete">
+    <!-- =====================================
+         HEADER
+    ====================================== -->
 
+    <header class="entete">
         <div class="conteneur">
 
             <a href="../index.html" class="logo">
-                <img src="../img/logo/logo-mboa-clair.png"
-                     alt="Mboa Kitchen, retour à l'accueil"
-                     class="logo-image">
+                <img
+                    src="../img/logo/logo-mboa-clair.png"
+                    alt="Mboa Kitchen, saveurs d'Afrique"
+                    class="logo-image"
+                >
             </a>
 
-            <button type="button"
-                    class="bouton-menu"
-                    aria-label="Ouvrir le menu de navigation"
-                    aria-expanded="false">
+            <button
+                type="button"
+                class="bouton-menu"
+                aria-label="Ouvrir le menu"
+                aria-expanded="false"
+            >
                 ☰
             </button>
 
             <nav aria-label="Navigation principale">
-
                 <ul class="menu">
                     <li><a href="../index.html">Accueil</a></li>
                     <li><a href="recettes.html">Recettes</a></li>
                     <li><a href="restaurants.html">Restaurants</a></li>
-
                     <li>
-                        <a href="budget.html"
-                           class="actif"
-                           aria-current="page">
+                        <a href="budget.html" class="actif" aria-current="page">
                             Budget
                         </a>
                     </li>
-
                     <li><a href="marche.html">Le Marché</a></li>
                     <li><a href="a-propos.html">À propos</a></li>
                 </ul>
-
             </nav>
 
-            <button type="button"
-                    class="bouton-theme"
-                    aria-label="Changer le thème du site">
+            <button
+                type="button"
+                class="bouton-theme"
+                aria-label="Changer le thème"
+            >
                 Thème sombre ☾
             </button>
 
         </div>
-
     </header>
 
 
-    <!-- CONTENU PRINCIPAL -->
-    <main id="contenu-principal">
+    <main>
 
+        <!-- =====================================
+             INTRODUCTION
+        ====================================== -->
 
-        <!-- INTRODUCTION ÉDITORIALE -->
         <section class="budget-hero">
 
-            <div class="conteneur budget-hero-contenu">
+            <div class="budget-hero-contenu">
 
-                <div class="budget-hero-texte">
+                <span class="budget-surtitre">
+                    L'art de bien manger sans se ruiner
+                </span>
 
-                    <p class="surtitre">
-                        L'art de bien manger
-                    </p>
+                <h1>
+                    L'Atelier des <em>saveurs</em>
+                </h1>
 
-                    <h1>
-                        Savourez plus.
-                        <br>
-                        <em>Dépensez mieux.</em>
-                    </h1>
+                <p>
+                    Imaginez votre semaine autour de vos plats préférés.
+                    Composez vos repas, choisissez vos quantités et découvrez
+                    combien vous allez réellement dépenser.
+                </p>
 
-                    <p class="budget-hero-description">
-                        Et si bien manger ne rimait plus avec dépenser
-                        davantage ?
+                <a href="#calculateur" class="budget-bouton-hero">
+                    Composer ma semaine
+                    <span>↓</span>
+                </a>
 
-                        Organisez vos repas, explorez les saveurs
-                        africaines et apprenez à composer une semaine
-                        gourmande sans perdre de vue votre budget.
-                    </p>
+            </div>
 
-                    <a href="#calculateur" class="banniere-bouton">
-                        Imaginer ma semaine
-                    </a>
+            <div class="budget-hero-image">
+                <img
+                    src="../img/plats/eru.jpg"
+                    alt="Plat traditionnel africain"
+                >
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             CONFIGURATION DU BUDGET
+        ====================================== -->
+
+        <section class="budget-configuration" id="calculateur">
+
+            <div class="budget-section-intro">
+
+                <span class="budget-surtitre">
+                    Avant de commencer
+                </span>
+
+                <h2>
+                    Votre semaine, <em>vos règles.</em>
+                </h2>
+
+                <p>
+                    Indiquez votre budget et le nombre de personnes.
+                    Vous pourrez ensuite organiser chaque journée librement.
+                </p>
+
+            </div>
+
+
+            <div class="budget-parametres">
+
+                <div class="budget-parametre">
+
+                    <label for="budget-total">
+                        Mon budget hebdomadaire
+                    </label>
+
+                    <div class="budget-champ-avec-unite">
+                        <input
+                            type="number"
+                            id="budget-total"
+                            min="0"
+                            step="1"
+                            value="100"
+                            placeholder="Ex. : 100"
+                        >
+
+                        <span>€</span>
+                    </div>
+
+                    <small>
+                        Le montant maximum que vous souhaitez dépenser.
+                    </small>
 
                 </div>
 
 
-                <!-- VISUEL ÉDITORIAL -->
-                <div class="budget-hero-visuel">
+                <div class="budget-parametre">
 
-                    <div class="budget-hero-cadre">
+                    <label for="nombre-personnes">
+                        Nombre de personnes
+                    </label>
 
-                        <span class="budget-hero-numero">
-                            ÉDITION N° 01
-                        </span>
+                    <div class="budget-champ-avec-unite">
+                        <input
+                            type="number"
+                            id="nombre-personnes"
+                            min="1"
+                            max="30"
+                            step="1"
+                            value="2"
+                        >
 
-                        <p>
-                            Le plaisir de bien manger,
-                            l'intelligence de bien dépenser.
-                        </p>
-
-                        <span class="budget-hero-decoration">
-                            MBOA KITCHEN
-                        </span>
-
+                        <span>pers.</span>
                     </div>
+
+                    <small>
+                        Les quantités des recettes seront adaptées.
+                    </small>
 
                 </div>
 
@@ -163,112 +215,101 @@
         </section>
 
 
+        <!-- =====================================
+             TABLEAU DE BORD
+        ====================================== -->
 
-        <!-- CONFIGURATION DU BUDGET -->
-        <section class="budget-calculateur" id="calculateur">
+        <section class="budget-dashboard">
 
-            <div class="conteneur">
+            <div class="budget-dashboard-entete">
 
-                <div class="budget-section-entete">
-
-                    <p class="surtitre">
-                        01 — Votre organisation
-                    </p>
+                <div>
+                    <span class="budget-surtitre">
+                        Votre suivi en direct
+                    </span>
 
                     <h2>
-                        Une semaine à votre mesure.
+                        Le bilan de votre <em>semaine</em>
                     </h2>
-
-                    <p>
-                        Chaque bonne semaine commence par une
-                        organisation intelligente. Définissez
-                        votre enveloppe et le nombre de personnes
-                        à régaler.
-                    </p>
-
                 </div>
 
+                <p>
+                    Votre budget évolue à chaque plat ajouté ou modifié.
+                </p>
 
-                <div class="budget-configuration">
+            </div>
 
 
-                    <!-- BUDGET HEBDOMADAIRE -->
-                    <div class="budget-champ">
+            <div class="budget-dashboard-contenu">
 
-                        <label for="budget-total">
-                            Mon budget hebdomadaire
-                        </label>
+                <!-- Cercle de progression -->
 
-                        <div class="budget-input-unite">
+                <div class="budget-cercle-zone">
 
-                            <input type="number"
-                                   id="budget-total"
-                                   name="budget-total"
-                                   min="1"
-                                   max="100000"
-                                   value="100"
-                                   step="1"
-                                   required
-                                   inputmode="decimal">
+                    <div
+                        class="budget-cercle"
+                        id="cercle-budget"
+                        role="progressbar"
+                        aria-label="Pourcentage du budget utilisé"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        aria-valuenow="0"
+                    >
 
-                            <span aria-hidden="true">€</span>
+                        <div class="budget-cercle-interieur">
+
+                            <span id="pourcentage-budget">
+                                0 %
+                            </span>
+
+                            <small>
+                                du budget utilisé
+                            </small>
 
                         </div>
 
-                        <small>
-                            Votre enveloppe maximale pour les sept jours.
-                        </small>
+                    </div>
+
+                    <p id="statut-budget" aria-live="polite">
+                        Commencez à composer votre semaine.
+                    </p>
+
+                </div>
+
+
+                <!-- Chiffres du budget -->
+
+                <div class="budget-chiffres">
+
+                    <div class="budget-chiffre">
+
+                        <span>Budget disponible</span>
+
+                        <strong id="affichage-budget">
+                            100,00 €
+                        </strong>
 
                     </div>
 
+                    <div class="budget-chiffre">
 
+                        <span>Dépenses prévues</span>
 
-                    <!-- NOMBRE DE PERSONNES -->
-                    <div class="budget-champ">
-
-                        <label for="nombre-personnes">
-                            Nombre de personnes
-                        </label>
-
-                        <div class="budget-input-unite">
-
-                            <input type="number"
-                                   id="nombre-personnes"
-                                   name="nombre-personnes"
-                                   min="1"
-                                   max="50"
-                                   value="2"
-                                   step="1"
-                                   required
-                                   inputmode="numeric">
-
-                            <span aria-hidden="true">pers.</span>
-
-                        </div>
-
-                        <small>
-                            Combien de personnes vont partager ces repas ?
-                        </small>
+                        <strong id="total-semaine">
+                            0,00 €
+                        </strong>
 
                     </div>
 
+                    <div class="budget-chiffre budget-chiffre-restant">
 
+                        <span>Reste à dépenser</span>
 
-                    <!-- DURÉE DU PLANNING -->
-                    <div class="budget-periode">
-
-                        <span class="budget-periode-label">
-                            Votre période
-                        </span>
-
-                        <strong>07 jours</strong>
-
-                        <small>
-                            Du lundi au dimanche
-                        </small>
+                        <strong id="budget-restant">
+                            100,00 €
+                        </strong>
 
                     </div>
-
 
                 </div>
 
@@ -277,81 +318,129 @@
         </section>
 
 
+        <!-- =====================================
+             PLANNING HEBDOMADAIRE
+        ====================================== -->
 
-        <!-- PLANNING DES REPAS -->
-        <section class="budget-planning" id="planning">
+        <section class="budget-planning">
 
-            <div class="conteneur">
+            <div class="budget-planning-entete">
 
+                <div>
 
-                <div class="budget-section-entete">
-
-                    <p class="surtitre">
-                        02 — Votre semaine gourmande
-                    </p>
+                    <span class="budget-surtitre">
+                        À vous de composer
+                    </span>
 
                     <h2>
-                        Composez votre menu.
+                        Votre menu de la <em>semaine</em>
                     </h2>
 
                     <p>
-                        Sept jours, quatorze occasions de se faire plaisir.
-                        Composez vos déjeuners et vos dîners selon vos
-                        envies et votre budget.
+                        Chaque journée est indépendante.
+                        Vous pouvez cuisiner, manger au restaurant,
+                        combiner les deux ou ne rien prévoir.
                     </p>
 
                 </div>
 
+                <div class="budget-legende">
 
+                    <span>
+                        <i class="legende-cuisine"></i>
+                        Fait maison
+                    </span>
 
-                <!-- INTRODUCTION DU PLANNING -->
-                <div class="budget-planning-intro">
-
-                    <p>
-                        Du lundi au dimanche, imaginez une semaine
-                        qui vous ressemble. À vous de choisir les
-                        saveurs qui composeront vos repas.
-                    </p>
-
-                </div>
-
-
-
-                <!-- LES SEPT JOURNÉES SERONT GÉNÉRÉES EN JAVASCRIPT -->
-                <div id="liste-jours"
-                     class="budget-liste-jours"
-                     aria-live="polite"
-                     aria-label="Planning des déjeuners et des dîners">
-
-                    <!-- Génération dynamique des sept journées -->
+                    <span>
+                        <i class="legende-restaurant"></i>
+                        Restaurant
+                    </span>
 
                 </div>
 
+            </div>
+            <button
+    type="button"
+    class="budget-imprimer"
+    onclick="window.print()"
+>
+    <span>↗</span>
+    Mon planning
+</button>
+<p
+    id="message-budget-impression"
+    class="message-budget-impression"
+    hidden
+    aria-live="polite"
+>
+    Votre budget est dépassé. Modifiez vos choix de repas
+    ou augmentez votre budget hebdomadaire pour pouvoir
+    imprimer votre planning.
+</p>
 
+
+
+            <!-- Les sept journées sont générées par JavaScript -->
+
+            <div
+                id="liste-jours"
+                class="budget-liste-jours"
+                aria-live="polite"
+            >
+                <p class="budget-chargement">
+                    Préparation de votre planning...
+                </p>
             </div>
 
         </section>
 
+
+        <!-- =====================================
+             CONSEIL DE FIN
+        ====================================== -->
+
+        <section class="budget-conclusion">
+
+            <div class="budget-conclusion-contenu">
+
+                <span class="budget-surtitre">
+                    Le plaisir avant tout
+                </span>
+
+                <h2>
+                    Bien manger est un art.
+                    <em>Bien gérer, aussi.</em>
+                </h2>
+
+                <p>
+                    Un bon repas ne se mesure pas seulement à son prix,
+                    mais aussi au plaisir de le partager.
+                    Faites de chaque semaine une nouvelle découverte culinaire.
+                </p>
+
+            </div>
+
+        </section>
 
     </main>
 
 
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
 
-    <!-- FOOTER COMMUN -->
     <footer class="pied">
 
         <div class="conteneur pied-colonnes">
 
-
-            <!-- IDENTITÉ -->
             <div class="pied-colonne">
 
                 <a href="../index.html" class="pied-logo">
-
-                    <img src="../img/logo/logo-mboa-sombre.png"
-                         alt="Mboa Kitchen"
-                         class="logo-image">
-
+                    <img
+                        src="../img/logo/logo-mboa-sombre.png"
+                        alt="Mboa Kitchen"
+                        class="logo-image"
+                    >
                 </a>
 
                 <p class="pied-texte">
@@ -361,8 +450,6 @@
             </div>
 
 
-
-            <!-- NAVIGATION -->
             <div class="pied-colonne">
 
                 <h2 class="pied-titre">
@@ -372,14 +459,12 @@
                 <ul>
                     <li><a href="recettes.html">Recettes</a></li>
                     <li><a href="restaurants.html">Restaurants</a></li>
-                    <li><a href="budget.html">Budget</a></li>
+                    <li><a href="budget.html">Comparateur</a></li>
                 </ul>
 
             </div>
 
 
-
-            <!-- INFORMATIONS -->
             <div class="pied-colonne">
 
                 <h2 class="pied-titre">
@@ -388,13 +473,13 @@
 
                 <ul>
                     <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="a-propos.html#equipe">L'équipe</a></li>
+                    <li><a href="a-propos.html#contact">Contact</a></li>
                 </ul>
 
             </div>
 
 
-
-            <!-- MARCHÉ -->
             <div class="pied-colonne">
 
                 <h2 class="pied-titre">
@@ -402,26 +487,20 @@
                 </h2>
 
                 <ul>
-                    <li>
-                        <a href="marche.html">
-                            Découvrir le marché
-                        </a>
-                    </li>
+                    <li><a href="marche.html#lexique">Lexique des ingrédients</a></li>
+                    <li><a href="marche.html#acheter">Où acheter</a></li>
+                    <li><a href="marche.html#agenda">Agenda</a></li>
                 </ul>
 
             </div>
 
-
         </div>
 
 
-        <!-- COPYRIGHT -->
         <p class="pied-copyright">
-            © 2026 Mboa Kitchen · Projet étudiant Efrei Paris
+            &copy; 2026 Mboa Kitchen · Projet étudiant Efrei Paris
         </p>
 
     </footer>
-
 </body>
-
 </html>

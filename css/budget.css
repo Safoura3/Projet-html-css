@@ -1,574 +1,1464 @@
-/* =========================================
-   MBOA KITCHEN — PAGE BUDGET
-   Direction artistique : magazine culinaire
-   Ambiance : éditoriale, chaleureuse et premium
-========================================= */
+
+/* =========================================================
+   MBOA KITCHEN — L'ATELIER DES SAVEURS
+   Direction artistique : revue gastronomique contemporaine
+   Ambiance : éditoriale, chaleureuse, raffinée et immersive
+========================================================= */
 
 
-/* 1. VARIABLES */
+/* =========================================================
+   1. IDENTITÉ VISUELLE
+========================================================= */
 
 :root {
-    --budget-creme: #f8f5ef;
+    --budget-creme: #f7f3eb;
     --budget-blanc: #fffefa;
     --budget-brun: #30231e;
+    --budget-brun-clair: #59443a;
     --budget-terracotta: #a65338;
-    --budget-dore: #c29a65;
-    --budget-gris: #81766e;
-    --budget-bordure: #e8dfd4;
-    --budget-rose: #f3e8df;
-    --budget-ombre: 0 15px 45px rgba(48, 35, 30, 0.07);
+    --budget-terracotta-clair: #d58a6d;
+    --budget-or: #c6a36a;
+    --budget-vert: #647b5b;
+    --budget-texte: #75675e;
+    --budget-bordure: #e8ded1;
+
+    --budget-ombre:
+        0 18px 50px rgba(48, 35, 30, 0.08);
+
+    --budget-ombre-forte:
+        0 25px 65px rgba(48, 35, 30, 0.14);
+
+    --budget-rayon: 18px;
+    --budget-transition: 0.35s ease;
 }
 
 
-/* 2. BASE GÉNÉRALE */
+/* Animation progressive du cercle */
 
-body {
-    background-color: var(--budget-creme);
+@property --progression {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 0%;
 }
 
-.budget-hero,
-.budget-calculateur,
-.budget-planning {
+
+/* =========================================================
+   2. BASE
+========================================================= */
+
+.page-budget {
+    background: var(--budget-creme);
+    color: var(--budget-brun);
+    font-family: "Jost", sans-serif;
+}
+
+.page-budget main {
     overflow: hidden;
 }
 
-.surtitre {
+.page-budget button,
+.page-budget input,
+.page-budget select {
+    font: inherit;
+}
+
+.page-budget button,
+.page-budget select {
+    cursor: pointer;
+}
+
+.page-budget a {
+    transition: color var(--budget-transition);
+}
+
+.page-budget em {
     color: var(--budget-terracotta);
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 500;
 }
 
-.lien-accessibilite {
-    position: absolute;
-    top: -100px;
-    left: 20px;
-    z-index: 9999;
-    padding: 12px 20px;
-    border-radius: 4px;
-    background-color: var(--budget-brun);
+.page-budget img {
+    max-width: 100%;
+}
+
+.page-budget ::selection {
+    background: var(--budget-terracotta);
     color: white;
-    text-decoration: none;
-    transition: top 0.3s ease;
-}
-
-.lien-accessibilite:focus {
-    top: 20px;
-}
-
-button:focus-visible,
-a:focus-visible,
-input:focus-visible,
-select:focus-visible {
-    outline: 2px solid var(--budget-terracotta);
-    outline-offset: 4px;
 }
 
 
-/* 3. HERO — INTRODUCTION ÉDITORIALE */
+/* =========================================================
+   3. HERO — INTRODUCTION IMMERSIVE
+========================================================= */
 
 .budget-hero {
     position: relative;
-    padding: 110px 0;
-    background-color: var(--budget-creme);
+    isolation: isolate;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    padding: 90px 9%;
+    overflow: hidden;
+    background: #30231e;
+    color: white;
+}
+
+.budget-hero::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(35, 25, 20, 0.98) 0%,
+            rgba(35, 25, 20, 0.92) 38%,
+            rgba(35, 25, 20, 0.55) 68%,
+            rgba(35, 25, 20, 0.15) 100%
+        );
+    content: "";
+}
+
+.budget-hero::after {
+    position: absolute;
+    z-index: -1;
+    right: -130px;
+    bottom: -250px;
+    width: 500px;
+    height: 500px;
+    border: 1px solid rgba(198, 163, 106, 0.25);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 35px rgba(198, 163, 106, 0.035),
+        0 0 0 70px rgba(198, 163, 106, 0.025);
+    content: "";
 }
 
 .budget-hero-contenu {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    align-items: center;
-    gap: 80px;
-}
-
-.budget-hero-texte h1 {
-    margin: 25px 0;
-    color: var(--budget-brun);
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(3.5rem, 6vw, 5.8rem);
-    font-weight: 500;
-    line-height: 0.98;
-    letter-spacing: -1.5px;
-}
-
-.budget-hero-texte h1 em {
-    color: var(--budget-terracotta);
-    font-weight: 500;
-}
-
-.budget-hero-description {
-    max-width: 480px;
-    margin-bottom: 35px;
-    color: var(--budget-gris);
-    font-size: 1rem;
-    line-height: 1.9;
-}
-
-
-/* BOUTON PRINCIPAL */
-
-.banniere-bouton {
-    display: inline-block;
-    padding: 16px 30px;
-    border: 1px solid var(--budget-terracotta);
-    background-color: var(--budget-terracotta);
-    color: white;
-    text-decoration: none;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-    transition: background-color 0.3s ease,
-                color 0.3s ease,
-                transform 0.3s ease;
-}
-
-.banniere-bouton:hover {
-    background-color: var(--budget-brun);
-    border-color: var(--budget-brun);
-    transform: translateY(-3px);
-}
-
-
-/* VISUEL ÉDITORIAL */
-
-.budget-hero-visuel {
     position: relative;
-    min-height: 480px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    background:
-        linear-gradient(
-            rgba(48, 35, 30, 0.18),
-            rgba(48, 35, 30, 0.48)
-        ),
-        url("../img/plats/eru.jpg") center/cover no-repeat;
-    box-shadow: var(--budget-ombre);
+    z-index: 3;
+    width: 57%;
+    max-width: 700px;
+    animation: budget-arrivee 1s ease both;
 }
 
-.budget-hero-cadre {
-    width: 78%;
-    min-height: 330px;
-    padding: 35px;
-    border: 1px solid rgba(255, 255, 255, 0.75);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-    text-align: center;
+.budget-hero .budget-surtitre {
+    color: #e4bd87;
 }
 
-.budget-hero-numero {
-    font-size: 0.65rem;
+.budget-surtitre {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: var(--budget-terracotta);
+    font-size: 0.72rem;
+    font-weight: 700;
     letter-spacing: 3px;
+    line-height: 1.6;
+    text-transform: uppercase;
 }
 
-.budget-hero-cadre p {
-    max-width: 320px;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 2.5rem;
-    line-height: 1.15;
+.budget-hero h1 {
+    max-width: 650px;
+    margin: 0 0 25px;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(4rem, 7vw, 7rem);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -2px;
 }
 
-.budget-hero-decoration {
-    font-size: 0.65rem;
-    letter-spacing: 4px;
+.budget-hero h1 em {
+    display: block;
+    color: #e3bd86;
+    font-size: 1.08em;
 }
 
-
-/* 4. TITRES DES SECTIONS */
-
-.budget-section-entete {
-    max-width: 680px;
-    margin: 0 auto 60px;
-    text-align: center;
-}
-
-.budget-section-entete h2 {
-    margin: 18px 0;
-    color: var(--budget-brun);
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(2.5rem, 4vw, 3.8rem);
-    font-weight: 500;
-    line-height: 1.1;
-}
-
-.budget-section-entete > p:last-child {
-    color: var(--budget-gris);
+.budget-hero-contenu p {
+    max-width: 470px;
+    margin: 25px 0;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 1rem;
+    font-weight: 300;
     line-height: 1.9;
 }
 
-
-/* 5. CONFIGURATION DU BUDGET */
-
-.budget-calculateur {
-    padding: 110px 0;
-    background-color: var(--budget-blanc);
+.budget-bouton-hero {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 18px;
+    padding: 16px 23px;
+    border: 1px solid var(--budget-or);
+    background: var(--budget-or);
+    color: var(--budget-brun);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: var(--budget-transition);
 }
+
+.budget-bouton-hero span {
+    font-size: 1.2rem;
+    transition: transform var(--budget-transition);
+}
+
+.budget-bouton-hero:hover {
+    background: transparent;
+    color: white;
+    transform: translateY(-4px);
+}
+
+.budget-bouton-hero:hover span {
+    transform: translateY(4px);
+}
+
+
+/* Photographie du hero */
+
+.budget-hero-image {
+    position: absolute;
+    z-index: -1;
+    top: 8%;
+    right: 7%;
+    width: 43%;
+    height: 84%;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+    animation: budget-image-arrivee 1.2s ease both;
+}
+
+.budget-hero-image::after {
+    position: absolute;
+    inset: 0;
+    border: 12px solid rgba(255, 255, 255, 0.06);
+    content: "";
+    pointer-events: none;
+}
+
+.budget-hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 1s ease;
+}
+
+.budget-hero:hover .budget-hero-image img {
+    transform: scale(1.045);
+}
+
+
+/* =========================================================
+   4. CONFIGURATION DU BUDGET
+========================================================= */
 
 .budget-configuration {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 25px;
+    position: relative;
+    padding: 110px 8% 90px;
 }
 
-.budget-champ,
-.budget-periode {
-    min-width: 0;
+.budget-section-intro {
+    max-width: 760px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.budget-section-intro h2,
+.budget-planning-entete h2,
+.budget-conclusion h2 {
+    margin: 12px 0 20px;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2.7rem, 4vw, 4rem);
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+.budget-section-intro p,
+.budget-planning-entete p {
+    max-width: 650px;
+    margin: auto;
+    color: var(--budget-texte);
+    font-size: 0.96rem;
+    font-weight: 300;
+    line-height: 1.9;
+}
+
+
+/* Les deux paramètres */
+
+.budget-parametres {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 920px;
+    margin: auto;
+}
+
+.budget-parametre {
+    position: relative;
     padding: 32px;
     border: 1px solid var(--budget-bordure);
-    background-color: white;
-    transition: transform 0.3s ease,
-                box-shadow 0.3s ease,
-                border-color 0.3s ease;
-}
-
-.budget-champ:hover,
-.budget-periode:hover {
-    transform: translateY(-4px);
-    border-color: var(--budget-dore);
+    background: var(--budget-blanc);
     box-shadow: var(--budget-ombre);
+    transition:
+        transform var(--budget-transition),
+        box-shadow var(--budget-transition),
+        border-color var(--budget-transition);
 }
 
-.budget-champ label,
-.budget-periode-label {
+.budget-parametre::before {
+    position: absolute;
+    top: 0;
+    left: 32px;
+    width: 42px;
+    height: 3px;
+    background: var(--budget-terracotta);
+    content: "";
+}
+
+.budget-parametre:hover {
+    transform: translateY(-5px);
+    border-color: #d7b9a5;
+    box-shadow: var(--budget-ombre-forte);
+}
+
+.budget-parametre label {
     display: block;
-    margin-bottom: 22px;
+    margin-bottom: 15px;
     color: var(--budget-brun);
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 0.92rem;
+    font-weight: 600;
 }
 
-.budget-input-unite {
+.budget-champ-avec-unite {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--budget-bordure);
+    min-height: 57px;
+    border: 1px solid var(--budget-bordure);
+    background: #fbf9f5;
+    transition: var(--budget-transition);
 }
 
-.budget-input-unite input {
-    width: 75%;
+.budget-champ-avec-unite:focus-within {
+    border-color: var(--budget-terracotta);
+    box-shadow: 0 0 0 4px rgba(166, 83, 56, 0.09);
+}
+
+.budget-champ-avec-unite input {
+    width: 100%;
     min-width: 0;
-    padding: 4px 0;
+    min-height: 55px;
+    padding: 12px 16px;
     border: none;
     outline: none;
     background: transparent;
     color: var(--budget-brun);
-    font-family: "Cormorant Garamond", serif;
-    font-size: 2.2rem;
+    font-size: 1.3rem;
     font-weight: 500;
-    transition: border-color 0.3s ease,
-                box-shadow 0.3s ease;
 }
 
-.budget-input-unite input:focus {
-    outline: none;
-    box-shadow: 0 2px 0 var(--budget-terracotta);
-}
-
-.budget-input-unite span {
+.budget-champ-avec-unite span {
+    padding: 0 17px;
     color: var(--budget-terracotta);
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 0.85rem;
+    font-weight: 700;
 }
 
-.budget-champ small,
-.budget-periode small {
+.budget-parametre small {
     display: block;
-    margin-top: 17px;
-    color: var(--budget-gris);
-    font-size: 0.75rem;
+    margin-top: 13px;
+    color: #93867c;
+    font-size: 0.79rem;
     line-height: 1.6;
 }
 
-.budget-periode {
-    background-color: var(--budget-rose);
+
+/* =========================================================
+   5. TABLEAU DE BORD — LE BILAN
+========================================================= */
+
+.budget-dashboard {
+    position: relative;
+    isolation: isolate;
+    margin: 15px 7% 105px;
+    padding: 55px;
+    overflow: hidden;
+    border-radius: 4px;
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(198, 163, 106, 0.13),
+            transparent 32%
+        ),
+        var(--budget-brun);
+    color: white;
+    box-shadow: 0 25px 65px rgba(48, 35, 30, 0.16);
 }
 
-.budget-periode strong {
-    display: block;
-    color: var(--budget-terracotta);
-    font-family: "Cormorant Garamond", serif;
-    font-size: 2.8rem;
+.budget-dashboard::before {
+    position: absolute;
+    z-index: -1;
+    top: -150px;
+    right: -110px;
+    width: 390px;
+    height: 390px;
+    border: 1px solid rgba(198, 163, 106, 0.16);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 35px rgba(198, 163, 106, 0.025),
+        0 0 0 70px rgba(198, 163, 106, 0.02);
+    content: "";
+}
+
+.budget-dashboard-entete {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 48px;
+    padding-bottom: 27px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.budget-dashboard-entete .budget-surtitre {
+    color: var(--budget-or);
+}
+
+.budget-dashboard-entete h2 {
+    margin: 0;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2.3rem, 4vw, 3.5rem);
+    font-weight: 400;
+}
+
+.budget-dashboard-entete h2 em {
+    color: #e3bd86;
+}
+
+.budget-dashboard-entete p {
+    max-width: 270px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.63);
+    font-size: 0.85rem;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.budget-dashboard-contenu {
+    display: grid;
+    grid-template-columns: minmax(250px, 0.85fr) 1.5fr;
+    align-items: center;
+    gap: 65px;
+}
+
+
+/* =========================================================
+   6. CERCLE DE PROGRESSION
+========================================================= */
+
+.budget-cercle-zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.budget-cercle {
+    --progression: 0%;
+    --gauge-color: var(--budget-or);
+
+    position: relative;
+    display: grid;
+    width: 235px;
+    height: 235px;
+    place-items: center;
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--gauge-color) var(--progression),
+        rgba(255, 255, 255, 0.11) var(--progression)
+    );
+    transform: rotate(-90deg);
+    transition:
+        --progression 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        background 0.5s ease;
+    filter: drop-shadow(0 0 20px rgba(198, 163, 106, 0.12));
+}
+
+.budget-cercle::before {
+    position: absolute;
+    width: 193px;
+    height: 193px;
+    border-radius: 50%;
+    background: #30231e;
+    content: "";
+}
+
+.budget-cercle::after {
+    position: absolute;
+    inset: -9px;
+    border: 1px solid rgba(198, 163, 106, 0.16);
+    border-radius: 50%;
+    content: "";
+}
+
+.budget-cercle-interieur {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(90deg);
+    text-align: center;
+}
+
+#pourcentage-budget {
+    color: #f3d6a5;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 3.5rem;
     font-weight: 500;
+    line-height: 1;
+}
+
+.budget-cercle-interieur small {
+    margin-top: 9px;
+    color: rgba(255, 255, 255, 0.64);
+    font-size: 0.75rem;
+    letter-spacing: 0.7px;
+}
+
+#statut-budget {
+    max-width: 260px;
+    margin: 28px 0 0;
+    color: #e3bd86;
+    font-size: 0.87rem;
+    font-weight: 500;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.budget-cercle.gauge-pulse {
+    animation: budget-pulse 0.55s ease;
 }
 
 
-/* 6. PLANNING HEBDOMADAIRE */
+/* =========================================================
+   7. INDICATEURS FINANCIERS
+========================================================= */
+
+.budget-chiffres {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.budget-chiffre {
+    position: relative;
+    min-height: 125px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.055);
+    transition:
+        background var(--budget-transition),
+        transform var(--budget-transition),
+        border-color var(--budget-transition);
+}
+
+.budget-chiffre:hover {
+    transform: translateY(-4px);
+    border-color: rgba(198, 163, 106, 0.4);
+    background: rgba(255, 255, 255, 0.09);
+}
+
+.budget-chiffre span {
+    display: block;
+    margin-bottom: 17px;
+    color: rgba(255, 255, 255, 0.63);
+    font-size: 0.78rem;
+    letter-spacing: 0.5px;
+}
+
+.budget-chiffre strong {
+    display: block;
+    color: white;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 500;
+    line-height: 1.1;
+    overflow-wrap: anywhere;
+}
+
+.budget-chiffre-restant {
+    border-color: rgba(198, 163, 106, 0.35);
+    background: rgba(198, 163, 106, 0.09);
+}
+
+#budget-restant {
+    color: #e3bd86;
+}
+
+#total-semaine {
+    color: #f0c6a7;
+}
+
+#affichage-budget {
+    color: white;
+}
+
+
+/* =========================================================
+   8. PLANNING HEBDOMADAIRE
+========================================================= */
 
 .budget-planning {
-    padding: 110px 0;
-    background-color: var(--budget-creme);
+    padding: 35px 7% 110px;
 }
 
-.budget-planning-intro {
+.budget-planning-entete {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 55px;
+}
+
+.budget-planning-entete > div:first-child {
     max-width: 720px;
-    margin: 0 auto 45px;
-    color: var(--budget-gris);
-    text-align: center;
-    line-height: 1.9;
+}
+
+.budget-planning-entete h2 {
+    margin-bottom: 20px;
+}
+
+.budget-planning-entete p {
+    margin: 0;
+}
+
+.budget-legende,
+.planning-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding-bottom: 5px;
+}
+
+.budget-legende span,
+.planning-legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--budget-texte);
+    font-size: 0.79rem;
+    white-space: nowrap;
+}
+
+.budget-legende i,
+.planning-legend i {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+}
+
+.legende-cuisine {
+    background: var(--budget-vert);
+}
+
+.legende-restaurant {
+    background: var(--budget-terracotta);
 }
 
 .budget-liste-jours {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 28px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.budget-chargement {
+    grid-column: 1 / -1;
+    padding: 35px;
+    color: var(--budget-texte);
+    text-align: center;
 }
 
 
-/* 7. CARTES DES JOURNÉES */
+/* =========================================================
+   9. CARTES DES JOURS
+========================================================= */
 
 .jour-budget {
-    padding: 38px;
+    position: relative;
+    overflow: hidden;
     border: 1px solid var(--budget-bordure);
-    background-color: var(--budget-blanc);
-    box-shadow: 0 5px 20px rgba(48, 35, 30, 0.025);
-    transition: border-color 0.3s ease,
-                transform 0.3s ease,
-                box-shadow 0.3s ease;
+    background: var(--budget-blanc);
+    box-shadow: 0 9px 30px rgba(48, 35, 30, 0.045);
+    transition:
+        transform var(--budget-transition),
+        box-shadow var(--budget-transition),
+        border-color var(--budget-transition);
 }
 
 .jour-budget:hover {
-    border-color: var(--budget-dore);
-    transform: translateY(-3px);
-    box-shadow: var(--budget-ombre);
+    transform: translateY(-5px);
+    border-color: #d9bba8;
+    box-shadow: var(--budget-ombre-forte);
 }
 
-.jour-budget h3 {
-    margin-bottom: 28px;
-    padding-bottom: 16px;
+.jour-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 23px 26px;
     border-bottom: 1px solid var(--budget-bordure);
+    background:
+        linear-gradient(
+            120deg,
+            #f5eee5,
+            #fbf8f2
+        );
+}
+
+.jour-date {
+    margin: 0;
+    color: var(--budget-brun);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.jour-mode {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 2px;
+    background: #ead9c8;
+    color: var(--budget-brun);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.jour-total {
     color: var(--budget-terracotta);
-    font-family: "Cormorant Garamond", serif;
-    font-size: 2.1rem;
-    font-weight: 500;
+    font-size: 0.9rem;
+    font-weight: 700;
+    white-space: nowrap;
 }
 
+.jour-contenu {
+    padding: 23px;
+}
 
-/* 8. LES DEUX REPAS DE LA JOURNÉE */
-
-.jour-repas {
+.repas-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 25px;
+    grid-template-columns: 1fr;
+    gap: 18px;
 }
+
+
+/* =========================================================
+   10. CARTES DES REPAS
+========================================================= */
 
 .repas-carte {
-    min-width: 0;
-    padding: 28px;
-    border-left: 3px solid var(--budget-dore);
-    background-color: #faf7f1;
-    transition: background-color 0.3s ease;
+    position: relative;
+    padding: 21px;
+    border: 1px solid #eee5da;
+    background: #fffdfa;
+    transition:
+        border-color var(--budget-transition),
+        background var(--budget-transition),
+        box-shadow var(--budget-transition);
 }
 
 .repas-carte:hover {
-    background-color: var(--budget-rose);
+    border-color: #d9b29e;
+    background: #fffefa;
+    box-shadow: 0 8px 22px rgba(48, 35, 30, 0.045);
 }
 
-.repas-carte h4 {
+.repas-topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
     margin-bottom: 18px;
-    color: var(--budget-brun);
-    font-family: "Cormorant Garamond", serif;
-    font-size: 1.65rem;
-    font-weight: 500;
 }
 
-
-/* 9. FORMULAIRES DES REPAS */
+.repas-carte h3,
+.repas-carte h4 {
+    margin: 0;
+    color: var(--budget-brun);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.45rem;
+    font-weight: 600;
+}
 
 .repas-carte label {
+    color: var(--budget-texte);
+    font-size: 0.85rem;
+}
+
+.repas-carte input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    accent-color: var(--budget-terracotta);
+    cursor: pointer;
+}
+
+.repas-options {
+    display: grid;
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.repas-options label,
+.restaurant-label {
     display: block;
-    margin: 17px 0 9px;
-    color: var(--budget-gris);
-    font-size: 0.8rem;
-    font-weight: 500;
+    margin-bottom: 7px;
+    color: var(--budget-brun-clair);
+    font-size: 0.81rem;
+    font-weight: 600;
 }
 
-.repas-carte select,
-.repas-carte input {
+.repas-options select,
+.repas-options input,
+.restaurant-box select,
+.restaurant-box input,
+.restaurant-cost input {
     width: 100%;
-    min-width: 0;
-    padding: 13px;
+    min-height: 46px;
+    padding: 10px 13px;
     border: 1px solid var(--budget-bordure);
-    border-radius: 0;
-    background-color: white;
-    color: var(--budget-brun);
-    font-family: "Jost", sans-serif;
-    font-size: 0.9rem;
-    transition: border-color 0.3s ease,
-                box-shadow 0.3s ease;
-}
-
-.repas-carte select:focus,
-.repas-carte input:focus {
+    border-radius: 2px;
     outline: none;
+    background: white;
+    color: var(--budget-brun);
+    font-size: 0.88rem;
+    transition:
+        border-color var(--budget-transition),
+        box-shadow var(--budget-transition);
+}
+
+.repas-options select:focus,
+.repas-options input:focus,
+.restaurant-box select:focus,
+.restaurant-box input:focus,
+.restaurant-cost input:focus {
     border-color: var(--budget-terracotta);
-    box-shadow: 0 0 0 3px rgba(166, 83, 56, 0.1);
+    box-shadow: 0 0 0 3px rgba(166, 83, 56, 0.09);
+}
+
+.repas-prix {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 19px;
+    padding-top: 15px;
+    border-top: 1px solid var(--budget-bordure);
+    color: var(--budget-texte);
+    font-size: 0.82rem;
+}
+
+.repas-prix strong {
+    color: var(--budget-terracotta);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.45rem;
+    font-weight: 600;
 }
 
 
-/* 10. FOOTER */
+/* =========================================================
+   11. FICHES RESTAURANTS DANS LE PLANNING
+========================================================= */
 
-.pied {
-    background-color: var(--budget-brun);
+.restaurant-box {
+    display: grid;
+    gap: 14px;
+    margin-top: 17px;
+    padding: 17px;
+    border: 1px solid #eadbca;
+    background: #f9f4ed;
 }
 
-.pied-texte,
-.pied-copyright {
-    color: #d5c8bd;
+.restaurant-box img,
+.restaurant-preview img {
+    display: block;
+    width: 100%;
+    max-height: 180px;
+    border-radius: 2px;
+    object-fit: cover;
+}
+
+.restaurant-box h4,
+.restaurant-preview h4 {
+    margin: 0 0 8px;
+    color: var(--budget-brun);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.restaurant-box p,
+.restaurant-preview p {
+    margin: 5px 0;
+    color: var(--budget-texte);
+    font-size: 0.83rem;
+    line-height: 1.7;
+}
+
+.restaurant-cost {
+    display: grid;
+    gap: 9px;
+}
+
+.restaurant-label {
+    margin: 0;
+}
+
+.restaurant-cost small {
+    color: var(--budget-texte);
+    font-size: 0.76rem;
+    line-height: 1.6;
+}
+
+/* Prix du plat sélectionné */
+
+.restaurant-prix-selectionne {
+    display: block;
+    margin-top: 5px;
+    padding: 11px 13px;
+    border-left: 3px solid var(--budget-terracotta);
+    background: #f1e7db;
+    color: var(--budget-brun);
+    font-size: 0.84rem;
+    font-weight: 600;
 }
 
 
-/* 11. RESPONSIVE — TABLETTES */
+/* =========================================================
+   12. DÉTAILS DES INGRÉDIENTS
+========================================================= */
 
-@media (max-width: 900px) {
+.ingredients-details {
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px solid var(--budget-bordure);
+    color: var(--budget-texte);
+    font-size: 0.82rem;
+}
+
+.ingredients-details summary {
+    color: var(--budget-terracotta);
+    cursor: pointer;
+    font-weight: 600;
+    transition: color var(--budget-transition);
+}
+
+.ingredients-details summary:hover {
+    color: var(--budget-brun);
+}
+
+.ingredients-details ul {
+    padding-left: 20px;
+    line-height: 1.9;
+}
+
+
+/* Messages vides */
+
+.repas-vide,
+.message-vide {
+    padding: 19px;
+    border: 1px dashed #d9cabc;
+    background: #fbf8f3;
+    color: var(--budget-texte);
+    font-size: 0.84rem;
+    line-height: 1.7;
+    text-align: center;
+}
+
+
+/* =========================================================
+   13. CONCLUSION
+========================================================= */
+
+.budget-conclusion {
+    position: relative;
+    isolation: isolate;
+    margin: 0 7% 105px;
+    padding: 85px 35px;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            135deg,
+            #eee4d7,
+            #f5eee5
+        );
+    text-align: center;
+}
+
+.budget-conclusion::before,
+.budget-conclusion::after {
+    position: absolute;
+    z-index: -1;
+    width: 220px;
+    height: 220px;
+    border: 1px solid rgba(166, 83, 56, 0.14);
+    border-radius: 50%;
+    content: "";
+}
+
+.budget-conclusion::before {
+    top: -130px;
+    left: -80px;
+    box-shadow: 0 0 0 25px rgba(166, 83, 56, 0.025);
+}
+
+.budget-conclusion::after {
+    right: -100px;
+    bottom: -140px;
+    box-shadow: 0 0 0 25px rgba(166, 83, 56, 0.025);
+}
+
+.budget-conclusion-contenu {
+    max-width: 730px;
+    margin: auto;
+}
+
+.budget-conclusion h2 {
+    margin: 10px auto 22px;
+}
+
+.budget-conclusion p {
+    max-width: 620px;
+    margin: auto;
+    color: var(--budget-texte);
+    font-size: 0.94rem;
+    font-weight: 300;
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   14. ANIMATIONS
+========================================================= */
+
+@keyframes budget-arrivee {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes budget-image-arrivee {
+    from {
+        opacity: 0;
+        transform: translateX(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes budget-pulse {
+    0% {
+        transform: rotate(-90deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(-90deg) scale(1.055);
+    }
+
+    100% {
+        transform: rotate(-90deg) scale(1);
+    }
+}
+
+
+/* =========================================================
+   15. TABLETTES
+========================================================= */
+
+@media (max-width: 950px) {
 
     .budget-hero {
-        padding: 85px 0;
+        min-height: 570px;
+        padding: 75px 7%;
     }
 
     .budget-hero-contenu {
+        width: 65%;
+    }
+
+    .budget-hero-image {
+        right: 4%;
+        width: 48%;
+    }
+
+    .budget-dashboard {
+        padding: 42px;
+    }
+
+    .budget-dashboard-contenu {
         grid-template-columns: 1fr;
-        gap: 50px;
+        gap: 45px;
     }
 
-    .budget-hero-texte {
-        max-width: 650px;
+    .budget-dashboard-entete {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
     }
 
-    .budget-hero-visuel {
-        min-height: 400px;
+    .budget-dashboard-entete p {
+        max-width: 500px;
     }
 
-    .budget-configuration {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    .budget-liste-jours {
+        grid-template-columns: 1fr;
     }
 
-    .budget-periode {
-        grid-column: 1 / -1;
+    .budget-planning-entete {
+        align-items: flex-start;
+        flex-direction: column;
     }
-
 }
 
 
-/* 12. RESPONSIVE — MOBILES */
+/* =========================================================
+   16. MOBILES
+========================================================= */
 
 @media (max-width: 600px) {
 
     .budget-hero {
-        padding: 65px 0;
+        min-height: 620px;
+        align-items: flex-end;
+        padding: 60px 7%;
+    }
+
+    .budget-hero::before {
+        background:
+            linear-gradient(
+                0deg,
+                rgba(35, 25, 20, 0.98) 0%,
+                rgba(35, 25, 20, 0.85) 50%,
+                rgba(35, 25, 20, 0.3) 100%
+            );
     }
 
     .budget-hero-contenu {
-        gap: 35px;
+        width: 100%;
+        max-width: 100%;
     }
 
-    .budget-hero-texte h1 {
-        font-size: clamp(3rem, 12vw, 3.7rem);
+    .budget-hero-image {
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 65%;
+        border: none;
+        opacity: 0.72;
     }
 
-    .budget-hero-description {
-        font-size: 0.92rem;
+    .budget-hero-image::after {
+        border: none;
     }
 
-    .budget-hero-visuel {
-        min-height: 310px;
-        padding: 18px;
+    .budget-hero h1 {
+        font-size: clamp(3.5rem, 13vw, 4.7rem);
     }
 
-    .budget-hero-cadre {
-        width: 90%;
-        min-height: 245px;
-        padding: 25px 18px;
-    }
-
-    .budget-hero-cadre p {
-        font-size: 2rem;
-    }
-
-    .budget-section-entete {
-        margin-bottom: 40px;
-    }
-
-    .budget-section-entete h2 {
-        font-size: 2.5rem;
-    }
-
-    .budget-calculateur,
-    .budget-planning {
-        padding: 75px 0;
+    .budget-hero-contenu p {
+        font-size: 0.9rem;
     }
 
     .budget-configuration {
-        grid-template-columns: 1fr;
-        gap: 16px;
+        padding: 75px 5% 60px;
     }
 
-    .budget-periode {
-        grid-column: auto;
+    .budget-section-intro {
+        margin-bottom: 35px;
     }
 
-    .budget-champ,
-    .budget-periode {
-        padding: 25px;
-    }
-
-    .jour-budget {
-        padding: 22px;
-    }
-
-    .jour-budget h3 {
-        font-size: 1.8rem;
-    }
-
-    .jour-repas {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .repas-carte {
-        padding: 22px;
-    }
-
-}
-
-
-/* 13. PETITS ÉCRANS */
-
-@media (max-width: 380px) {
-
-    .budget-hero-texte h1 {
+    .budget-section-intro h2,
+    .budget-planning-entete h2,
+    .budget-conclusion h2 {
         font-size: 2.8rem;
     }
 
-    .budget-hero-cadre p {
-        font-size: 1.7rem;
+    .budget-parametres {
+        grid-template-columns: 1fr;
+        gap: 17px;
     }
 
-    .jour-budget {
-        padding: 17px;
+    .budget-parametre {
+        padding: 26px;
+    }
+
+    .budget-dashboard {
+        margin: 15px 5% 75px;
+        padding: 32px 20px;
+    }
+
+    .budget-dashboard-entete h2 {
+        font-size: 2.5rem;
+    }
+
+    .budget-dashboard-contenu {
+        gap: 35px;
+    }
+
+    .budget-cercle {
+        width: 200px;
+        height: 200px;
+    }
+
+    .budget-cercle::before {
+        width: 164px;
+        height: 164px;
+    }
+
+    #pourcentage-budget {
+        font-size: 3rem;
+    }
+
+    .budget-chiffres {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .budget-chiffre {
+        min-height: auto;
+        padding: 21px;
+    }
+
+    .budget-chiffre strong {
+        font-size: 2rem;
+    }
+
+    .budget-planning {
+        padding: 20px 5% 75px;
+    }
+
+    .budget-planning-entete {
+        margin-bottom: 35px;
+    }
+
+    .budget-legende,
+    .planning-legend {
+        gap: 13px;
+    }
+
+    .jour-header {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .jour-contenu {
+        padding: 15px;
     }
 
     .repas-carte {
-        padding: 18px;
+        padding: 16px;
     }
 
+    .repas-topline {
+        align-items: flex-start;
+    }
+
+    .repas-prix {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .budget-conclusion {
+        margin: 0 5% 75px;
+        padding: 60px 23px;
+    }
 }
 
 
-/* 14. ACCESSIBILITÉ — MOUVEMENTS RÉDUITS */
+/* =========================================================
+   17. PETITS ÉCRANS
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .budget-hero h1 {
+        font-size: 3.2rem;
+    }
+
+    .budget-dashboard {
+        padding: 27px 15px;
+    }
+
+    .budget-cercle {
+        width: 180px;
+        height: 180px;
+    }
+
+    .budget-cercle::before {
+        width: 146px;
+        height: 146px;
+    }
+
+    #pourcentage-budget {
+        font-size: 2.6rem;
+    }
+
+    .jour-date {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* =========================================================
+   18. ACCESSIBILITÉ
+========================================================= */
+
+.page-budget :focus-visible {
+    outline: 3px solid var(--budget-or);
+    outline-offset: 4px;
+}
 
 @media (prefers-reduced-motion: reduce) {
 
-    .budget-hero *,
-    .budget-calculateur *,
-    .budget-planning * {
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
+    .page-budget *,
+    .page-budget *::before,
+    .page-budget *::after {
         scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+/* =========================================
+   BOUTON MON PLANNING
+========================================= */
+
+.budget-imprimer {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 22px;
+    border: 1px solid #a65338;
+    border-radius: 4px;
+    background: #a65338;
+    color: #fffefa;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.budget-imprimer:hover {
+    background: #30231e;
+    border-color: #30231e;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   VERSION IMPRESSION DU PLANNING
+========================================= */
+
+@media print {
+
+    @page {
+        size: A4;
+        margin: 15mm;
+    }
+
+    body {
+        background: white !important;
+        color: #30231e !important;
+    }
+
+    /* Masquer les éléments inutiles */
+
+    body > .annonce,
+    body > .entete,
+    body > footer {
+        display: none !important;
+    }
+
+    /* Ne conserver que le bilan et le planning */
+
+    body > main > section {
+        display: none !important;
+    }
+
+    body > main > .budget-dashboard,
+    body > main > .budget-planning {
+        display: block !important;
+        width: 100% !important;
+        margin: 0 0 25px !important;
+        padding: 20px 0 !important;
+        background: white !important;
+        color: #30231e !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    /* Titre du document */
+
+    .budget-dashboard::before {
+        content: "MBOA KITCHEN — MON PLANNING GOURMAND";
+        display: block;
+        margin-bottom: 25px;
+        color: #a65338;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 25px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    /* Masquer le bouton à l'impression */
+
+    .budget-imprimer {
+        display: none !important;
+    }
+
+    /* Conserver les cartes et leurs couleurs */
+
+    .budget-dashboard *,
+    .budget-planning * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .jour-budget,
+    .repas-carte {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .budget-dashboard h2,
+    .budget-planning h2 {
+        color: #30231e !important;
+    }
+
+    .budget-cercle {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
     }
 
 }
