@@ -509,9 +509,12 @@ body.sombre .plat figcaption strong { color: #f3ece4; }
     .pied-colonne { width: 100%; }
 
     .grille-points { gap: 15px; }
-    .grille-categories { flex-wrap: wrap; gap: 20px; }
+    .grille-categories { 
+        flex-wrap: wrap;
+         gap: 20px; }
     .categorie { width: 30%; }
 }
+
 /*pages recettes*/
 .intro{
     background-color: var(--fond-doux);
@@ -554,7 +557,8 @@ padding: 56px 0;}
 .grille-recettes{ 
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
-    gap :24px;
+    gap :24px;}
+.carte-recette{
     padding:0;
     border: 1px solid var(--trait);
     background-color:var(--fond);
@@ -574,9 +578,11 @@ padding: 56px 0;}
 }
 .carte-recette h3{
     font-size: 24px;
-    margin : 14px 16px 4px;
+    margin : 14px 16px 4px;}
+.carte-recette p{
 font-size: 14px; 
 color:var(--texte-doux);
+margin: 0 16px 16px;
 }
 .fiche{
     background-color: var(--fond-doux);
@@ -682,10 +688,15 @@ gap:18px;
     grid-column: 1/-1;
 }
 .champ .invalide{
-    border-color:#B3261E;
-    #message-form.erreur{
+    border-color:#B3261E;}
+#message-form.erreur{
         color:#B3261E ;
 }
 #message-form.succes{
     color:var(--accent);
-}}
+}
+
+
+
+
+

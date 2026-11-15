@@ -1,0 +1,678 @@
+
+/* =========================================
+   MBOA KITCHEN — PAGE À PROPOS
+   Direction artistique : magazine culinaire
+========================================= */
+
+
+/* 1. BASE GÉNÉRALE */
+
+.apropos-hero,
+.apropos-histoire,
+.apropos-valeurs,
+.apropos-equipe,
+.apropos-conclusion {
+    overflow: hidden;
+}
+
+
+/* 2. HERO — INTRODUCTION */
+
+.apropos-hero {
+    position: relative;
+    min-height: 680px;
+    padding: 75px max(6%, calc((100% - 1200px) / 2));
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 55px;
+    background: #f6efe7;
+}
+
+.apropos-hero-texte {
+    position: relative;
+    z-index: 2;
+    padding: 30px 0;
+    animation: apparition 1s ease both;
+}
+
+.apropos-hero-texte .surtitre {
+    margin-bottom: 28px;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+}
+
+.apropos-hero h1 {
+    margin-bottom: 28px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(65px, 7vw, 100px);
+    line-height: 0.88;
+    font-weight: 500;
+    letter-spacing: -3px;
+    color: #1f1a17;
+}
+
+.apropos-hero h1 span {
+    color: #9b7046;
+    font-style: italic;
+}
+
+.apropos-intro {
+    max-width: 430px;
+    margin-bottom: 32px;
+    color: #6b625b;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.apropos-lien {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #8a6238;
+    color: #1f1a17;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    transition: gap 0.3s ease;
+}
+
+.apropos-lien:hover {
+    gap: 28px;
+}
+
+.apropos-lien span {
+    color: #8a6238;
+    font-size: 18px;
+}
+
+
+/* IMAGE DU HERO */
+
+.apropos-hero-image {
+    position: relative;
+    align-self: center;
+    height: 500px;
+    margin-left: 15px;
+    overflow: hidden;
+    animation: apparition 1.2s ease both;
+}
+
+.apropos-hero-image::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 75%;
+    height: 75%;
+    border: 1px solid #d9a566;
+    z-index: 0;
+}
+
+.apropos-hero-image img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.apropos-image-legende {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px 22px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    background: rgba(31, 26, 23, 0.82);
+    color: #fff;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.apropos-hero-numero {
+    position: absolute;
+    bottom: 22px;
+    left: 6%;
+    color: #9b7046;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+
+/* 3. NOTRE HISTOIRE */
+
+.apropos-histoire {
+    position: relative;
+    padding: 120px max(8%, calc((100% - 1050px) / 2));
+    display: grid;
+    grid-template-columns: 0.35fr 1.4fr;
+    gap: 45px;
+    background: #fff;
+}
+
+.histoire-numero {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: #8a6238;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.histoire-numero span:first-child {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 50px;
+    letter-spacing: 0;
+}
+
+.histoire-contenu {
+    max-width: 700px;
+}
+
+.histoire-contenu .surtitre {
+    margin-bottom: 22px;
+}
+
+.histoire-contenu h2 {
+    margin-bottom: 35px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(43px, 5vw, 65px);
+    font-weight: 500;
+    line-height: 1.03;
+    color: #1f1a17;
+}
+
+.histoire-contenu h2 em {
+    color: #9b7046;
+    font-weight: 400;
+}
+
+.histoire-contenu > p:not(.surtitre) {
+    max-width: 620px;
+    margin-bottom: 20px;
+    color: #6b625b;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.histoire-signature {
+    grid-column: 2;
+    margin-top: 20px;
+    padding: 25px 30px;
+    border-left: 2px solid #d9a566;
+    background: #f6efe7;
+}
+
+.histoire-signature span {
+    color: #8a6238;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.histoire-signature p {
+    margin-top: 10px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 25px;
+    font-style: italic;
+    color: #1f1a17;
+}
+
+
+/* 4. NOS VALEURS */
+
+.apropos-valeurs {
+    padding: 110px max(6%, calc((100% - 1200px) / 2));
+    background: #f3ece4;
+}
+
+.valeurs-entete {
+    max-width: 650px;
+    margin-bottom: 65px;
+}
+
+.valeurs-entete .surtitre {
+    margin-bottom: 20px;
+}
+
+.valeurs-entete h2 {
+    margin-bottom: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(45px, 5vw, 65px);
+    font-weight: 500;
+    line-height: 1;
+    color: #1f1a17;
+}
+
+.valeurs-entete h2 em {
+    color: #9b7046;
+    font-weight: 400;
+}
+
+.valeurs-entete > p:last-child {
+    max-width: 480px;
+    color: #6b625b;
+    line-height: 1.8;
+}
+
+.valeurs-grille {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.valeur {
+    position: relative;
+    min-height: 300px;
+    padding: 30px 24px;
+    background: #fff;
+    border: 1px solid #e8e1d9;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.valeur:nth-child(even) {
+    transform: translateY(25px);
+}
+
+.valeur:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(31, 26, 23, 0.09);
+}
+
+.valeur-index {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    color: #b5a394;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.valeur-symbole {
+    display: block;
+    margin: 25px 0 30px;
+    color: #a77c4e;
+    font-size: 35px;
+}
+
+.valeur h3 {
+    margin-bottom: 15px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 29px;
+    font-weight: 500;
+    color: #1f1a17;
+}
+
+.valeur p {
+    color: #6b625b;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* 5. NOTRE ÉQUIPE */
+
+.apropos-equipe {
+    padding: 115px max(6%, calc((100% - 1200px) / 2));
+    background: #fff;
+}
+
+.equipe-entete {
+    max-width: 650px;
+    margin-bottom: 60px;
+}
+
+.equipe-entete .surtitre {
+    margin-bottom: 20px;
+}
+
+.equipe-entete h2 {
+    margin-bottom: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(45px, 5vw, 65px);
+    font-weight: 500;
+    line-height: 1;
+    color: #1f1a17;
+}
+
+.equipe-entete h2 em {
+    color: #9b7046;
+    font-weight: 400;
+}
+
+.equipe-entete > p:last-child {
+    max-width: 510px;
+    color: #6b625b;
+    line-height: 1.8;
+}
+
+.equipe-grille {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.membre-equipe {
+    position: relative;
+    min-height: 290px;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: #f6efe7;
+    border-bottom: 3px solid #d9a566;
+    transition: transform 0.3s ease;
+}
+
+.membre-equipe:nth-child(2) {
+    background: #eee3d7;
+}
+
+.membre-equipe:nth-child(3) {
+    background: #f3ece4;
+}
+
+.membre-equipe:hover {
+    transform: translateY(-7px);
+}
+
+.membre-numero {
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    color: #8a6238;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.membre-initiales {
+    width: 85px;
+    height: 85px;
+    margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #b38a5e;
+    border-radius: 50%;
+    color: #8a6238;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+}
+
+.membre-equipe h3 {
+    margin-bottom: 8px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 25px;
+    font-weight: 500;
+    color: #1f1a17;
+}
+
+.membre-equipe p {
+    color: #6b625b;
+    font-size: 12px;
+}
+
+
+/* 6. CONCLUSION */
+
+.apropos-conclusion {
+    padding: 105px 25px;
+    text-align: center;
+    background: #1f1a17;
+    color: #f6efe7;
+}
+
+.apropos-conclusion .surtitre {
+    margin-bottom: 25px;
+    color: #d9a566;
+}
+
+.apropos-conclusion h2 {
+    margin-bottom: 25px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(48px, 6vw, 75px);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.apropos-conclusion h2 em {
+    color: #d9a566;
+}
+
+.apropos-conclusion > p:not(.surtitre) {
+    max-width: 520px;
+    margin: 0 auto 35px;
+    color: #d0c3b7;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.conclusion-liens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.conclusion-liens a {
+    text-decoration: none;
+}
+
+.apropos-conclusion .banniere-bouton {
+    background: #d9a566;
+    color: #1f1a17;
+}
+
+.apropos-conclusion .bouton-contour {
+    border-color: #d9a566;
+    color: #f6efe7;
+}
+
+
+/* 7. ANIMATIONS */
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* 8. MODE SOMBRE */
+
+body.sombre .apropos-hero,
+body.sombre .apropos-valeurs,
+body.sombre .membre-equipe {
+    background: #29231f;
+}
+
+body.sombre .apropos-histoire,
+body.sombre .apropos-equipe,
+body.sombre .valeur {
+    background: #211c19;
+}
+
+body.sombre .apropos-hero h1,
+body.sombre .histoire-contenu h2,
+body.sombre .valeurs-entete h2,
+body.sombre .equipe-entete h2,
+body.sombre .valeur h3,
+body.sombre .membre-equipe h3 {
+    color: #f6efe7;
+}
+
+body.sombre .apropos-intro,
+body.sombre .histoire-contenu > p:not(.surtitre),
+body.sombre .valeurs-entete > p:last-child,
+body.sombre .equipe-entete > p:last-child,
+body.sombre .valeur p,
+body.sombre .membre-equipe p {
+    color: #c5b8ac;
+}
+
+body.sombre .histoire-signature {
+    background: #302822;
+}
+
+body.sombre .histoire-signature p {
+    color: #f6efe7;
+}
+
+body.sombre .valeur {
+    border-color: #453a31;
+}
+
+body.sombre .membre-equipe {
+    border-color: #8a6238;
+}
+
+
+/* 9. RESPONSIVE — TABLETTES */
+
+@media (max-width: 900px) {
+
+    .apropos-hero {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        padding: 65px 5%;
+    }
+
+    .apropos-hero-image {
+        height: 440px;
+    }
+
+    .apropos-hero h1 {
+        font-size: 65px;
+    }
+
+    .valeurs-grille {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .valeur:nth-child(even) {
+        transform: none;
+    }
+
+    .valeur:hover {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* 10. RESPONSIVE — TÉLÉPHONES */
+
+@media (max-width: 600px) {
+
+    .apropos-hero {
+        grid-template-columns: 1fr;
+        padding: 55px 25px 65px;
+        gap: 35px;
+    }
+
+    .apropos-hero h1 {
+        font-size: 70px;
+    }
+
+    .apropos-hero-image {
+        height: 390px;
+        margin: 0 12px 15px 0;
+    }
+
+    .apropos-hero-numero {
+        bottom: 18px;
+        left: 25px;
+    }
+
+    .apropos-image-legende {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .apropos-histoire {
+        grid-template-columns: 1fr;
+        padding: 75px 25px;
+        gap: 25px;
+    }
+
+    .histoire-numero {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .histoire-numero span:first-child {
+        font-size: 35px;
+    }
+
+    .histoire-signature {
+        grid-column: 1;
+    }
+
+    .apropos-valeurs,
+    .apropos-equipe {
+        padding: 75px 25px;
+    }
+
+    .valeurs-entete,
+    .equipe-entete {
+        margin-bottom: 40px;
+    }
+
+    .valeurs-grille {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .valeur {
+        min-height: 240px;
+    }
+
+    .equipe-grille {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .membre-equipe {
+        min-height: 250px;
+    }
+
+    .apropos-conclusion {
+        padding: 80px 25px;
+    }
+
+    .conclusion-liens {
+        flex-direction: column;
+    }
+
+    .conclusion-liens a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* ACCESSIBILITÉ : LIMITER LES ANIMATIONS */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
