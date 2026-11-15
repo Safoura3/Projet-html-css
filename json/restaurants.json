@@ -1,3 +1,4 @@
+
 [
     {
         "nom": "Le Bois d'Ébène",
@@ -6,7 +7,21 @@
         "adresse": "4 rue André del Sarte",
         "ville": "Paris 18e",
         "plats": "capitaine grillé, mafé, ndolè",
-        "prix": null,
+        "prix": 18,
+        "prix_plats": [
+            {
+                "nom": "Capitaine grillé",
+                "prix": 20
+            },
+            {
+                "nom": "Mafé",
+                "prix": 16
+            },
+            {
+                "nom": "Ndolè",
+                "prix": 18
+            }
+        ],
         "site": "",
         "image": "../img/plats/ndole.jpg"
     },
@@ -17,7 +32,21 @@
         "adresse": "6 rue Elzévir",
         "ville": "Paris 3e",
         "plats": "yassa, mafé, thiéboudienne",
-        "prix": null,
+        "prix": 17,
+        "prix_plats": [
+            {
+                "nom": "Yassa",
+                "prix": 16
+            },
+            {
+                "nom": "Mafé",
+                "prix": 16
+            },
+            {
+                "nom": "Thiéboudienne",
+                "prix": 19
+            }
+        ],
         "site": "",
         "image": "../img/plats/thieboudienne.jpg"
     },
@@ -28,7 +57,17 @@
         "adresse": "6 rue Godefroy-Cavaignac",
         "ville": "Paris 11e",
         "plats": "mafé aux légumes, ndolè",
-        "prix": null,
+        "prix": 16,
+        "prix_plats": [
+            {
+                "nom": "Mafé aux légumes",
+                "prix": 15
+            },
+            {
+                "nom": "Ndolè",
+                "prix": 17
+            }
+        ],
         "site": "",
         "image": "../img/plats/mafe.jpg"
     },
@@ -39,7 +78,17 @@
         "adresse": "14 rue de la Chine",
         "ville": "Paris 20e",
         "plats": "attiéké, pintade kedjenou",
-        "prix": null,
+        "prix": 19,
+        "prix_plats": [
+            {
+                "nom": "Attiéké accompagné",
+                "prix": 16
+            },
+            {
+                "nom": "Pintade kedjenou",
+                "prix": 22
+            }
+        ],
         "site": "",
         "image": "../img/plats/kedjenou.jpg"
     },
@@ -50,7 +99,17 @@
         "adresse": "9 boulevard des Italiens",
         "ville": "Paris 2e",
         "plats": "poulet DG revisité, yassa",
-        "prix": null,
+        "prix": 18,
+        "prix_plats": [
+            {
+                "nom": "Poulet DG revisité",
+                "prix": 20
+            },
+            {
+                "nom": "Yassa",
+                "prix": 16
+            }
+        ],
         "site": "",
         "image": "../img/plats/poulet-dg.jpg"
     },
@@ -61,7 +120,21 @@
         "adresse": "34 rue du Faubourg Saint-Martin",
         "ville": "Paris 10e",
         "plats": "bols mafé ou yassa, alloco",
-        "prix": null,
+        "prix": 16,
+        "prix_plats": [
+            {
+                "nom": "Bol mafé",
+                "prix": 16
+            },
+            {
+                "nom": "Bol yassa",
+                "prix": 16
+            },
+            {
+                "nom": "Alloco",
+                "prix": 8
+            }
+        ],
         "site": "",
         "image": "../img/plats/alloco.jpg"
     },
@@ -72,7 +145,17 @@
         "adresse": "40 rue Jean-Pierre Timbaud",
         "ville": "Paris 11e",
         "plats": "mafé fumé, alloco",
-        "prix": null,
+        "prix": 17,
+        "prix_plats": [
+            {
+                "nom": "Mafé fumé",
+                "prix": 17
+            },
+            {
+                "nom": "Alloco",
+                "prix": 8
+            }
+        ],
         "site": "",
         "image": "../img/plats/yassa-au-poulet.jpg"
     }

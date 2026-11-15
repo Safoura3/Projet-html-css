@@ -743,3 +743,556 @@ gap:18px;
     .plat.loin-gauche,
     .plat.loin-droite { opacity: 0; }
 }
+
+/* =========================================
+   MBOA KITCHEN — RESPONSIVE DESIGN
+   Tablettes et téléphones
+========================================= */
+
+/* TABLETTES ET PETITS ÉCRANS */
+@media (max-width: 800px) {
+
+    /* Général */
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .conteneur {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    /* En-tête et navigation */
+    .entete .conteneur {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .logo {
+        order: 1;
+        margin-right: auto;
+    }
+
+    .bouton-menu {
+        display: block;
+        order: 2;
+    }
+
+    .bouton-theme {
+        order: 3;
+        padding: 7px 12px;
+        font-size: 12px;
+    }
+
+    .entete nav {
+        order: 4;
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        padding: 10px 0;
+        border-top: 1px solid #e8e1d9;
+    }
+
+    .menu.ouvert {
+        display: flex;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    .menu a {
+        display: block;
+        padding: 12px 5px;
+        border-bottom: 1px solid #e8e1d9;
+    }
+
+    .menu a:hover,
+    .menu a.actif {
+        border-bottom: 1px solid #8a6238;
+    }
+
+    /* Bannière */
+    .banniere {
+        padding: 45px 0;
+    }
+
+    .banniere .conteneur {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .banniere-texte,
+    .banniere-visuel {
+        width: 100%;
+    }
+
+    .banniere-texte {
+        text-align: center;
+    }
+
+    .banniere-texte p {
+        margin: 15px 0;
+    }
+
+    .banniere-boutons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Carrousel */
+    .carrousel {
+        height: 330px;
+    }
+
+    .plat {
+        width: 230px;
+        margin-left: -115px;
+    }
+
+    .plat img {
+        width: 210px;
+        height: 210px;
+    }
+
+    .plat.gauche {
+        transform: translateX(-145px) scale(0.55);
+    }
+
+    .plat.droite {
+        transform: translateX(145px) scale(0.55);
+    }
+
+    .plat.loin-gauche,
+    .plat.loin-droite {
+        opacity: 0;
+    }
+
+    /* Points forts */
+    .grille-points {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .point {
+        align-items: flex-start;
+    }
+
+    /* Catégories */
+    .grille-categories {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px 15px;
+    }
+
+    .categorie {
+        width: auto;
+    }
+
+    .categorie img {
+        width: 95px;
+        height: 95px;
+    }
+
+    /* Plat du jour */
+    .plat-du-jour .conteneur {
+        flex-direction: column;
+    }
+
+    .plat-du-jour-texte,
+    .plat-du-jour-image {
+        width: 100%;
+    }
+
+    .plat-du-jour-image {
+        padding: 35px;
+    }
+
+    /* Restaurants */
+    .grille-restos {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .carte-resto {
+        width: 100%;
+    }
+
+    /* Footer */
+    .pied-colonnes {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px;
+    }
+
+    .pied-colonne {
+        width: 100%;
+    }
+
+    .pied-copyright {
+        margin-top: 30px;
+    }
+
+    /* Pages recettes */
+    .intro {
+        padding: 40px 0;
+    }
+
+    .intro h1 {
+        font-size: 40px;
+    }
+
+    .fiche-contenu {
+        gap: 25px;
+    }
+
+    #fiche-image {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .fiche h2 {
+        font-size: 36px;
+    }
+
+    .proposer {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+}
+
+
+/* PETITS TÉLÉPHONES */
+@media (max-width: 520px) {
+
+    /* Général */
+    h1 {
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 29px;
+    }
+
+    .conteneur {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .annonce {
+        font-size: 11px;
+        padding: 9px 12px;
+    }
+
+    /* En-tête */
+    .entete .conteneur {
+        gap: 10px;
+    }
+
+    .logo-image {
+        height: 31px;
+    }
+
+    .bouton-menu {
+        font-size: 22px;
+    }
+
+    .bouton-theme {
+        font-size: 10px;
+        padding: 7px 10px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    /* Bannière */
+    .banniere {
+        padding: 35px 0;
+    }
+
+    .banniere-texte h1 {
+        font-size: 36px;
+    }
+
+    .banniere-texte p {
+        font-size: 14px;
+    }
+
+    .banniere-boutons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .banniere-bouton {
+        text-align: center;
+        padding: 13px 15px;
+    }
+
+    /* Carrousel */
+    .carrousel {
+        height: 290px;
+    }
+
+    .plat {
+        width: 190px;
+        margin-left: -95px;
+    }
+
+    .plat img {
+        width: 175px;
+        height: 175px;
+        border-width: 7px;
+    }
+
+    .plat.gauche {
+        transform: translateX(-105px) scale(0.5);
+    }
+
+    .plat.droite {
+        transform: translateX(105px) scale(0.5);
+    }
+
+    .plat figcaption {
+        font-size: 11px;
+    }
+
+    .plat figcaption strong {
+        font-size: 22px;
+    }
+
+    /* Points forts */
+    .grille-points {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .point h3 {
+        font-size: 14px;
+    }
+
+    .point p {
+        font-size: 12px;
+    }
+
+    /* Catégories */
+    .categories {
+        padding: 50px 0;
+    }
+
+    .grille-categories {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px 12px;
+    }
+
+    .categorie img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .categorie span {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    /* Plat du jour */
+    .plat-du-jour-texte {
+        padding: 40px 25px;
+    }
+
+    .plat-du-jour-image img {
+        width: 190px;
+        height: 190px;
+    }
+
+    /* Idée du soir */
+    .idee {
+        margin-top: 45px;
+        padding: 25px 18px;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .idee h2 {
+        font-size: 24px;
+    }
+
+    .bouton-contour {
+        max-width: 100%;
+        padding: 12px 16px;
+        font-size: 11px;
+    }
+
+    /* Restaurants */
+    .restaurants {
+        padding: 50px 0;
+    }
+
+    .restaurants-entete {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .restaurants-entete h2 {
+        font-size: 27px;
+    }
+
+    .lien-tout {
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    .grille-restos {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .carte-resto img {
+        height: 190px;
+    }
+
+    /* Footer */
+    .pied {
+        padding-top: 40px;
+    }
+
+    .pied-colonnes {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px 18px;
+    }
+
+    .pied-colonne:first-child {
+        grid-column: 1 / -1;
+    }
+
+    .pied-titre {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .pied li {
+        font-size: 13px;
+    }
+
+    .pied-copyright {
+        padding: 18px;
+        font-size: 11px;
+        text-align: center;
+    }
+
+    /* Pages recettes */
+    .intro {
+        padding: 35px 0;
+    }
+
+    .intro h1 {
+        font-size: 34px;
+    }
+
+    .intro p {
+        font-size: 14px;
+    }
+
+    .filtres {
+        gap: 8px;
+    }
+
+    .filtre {
+        padding: 0 13px;
+        font-size: 12px;
+    }
+
+    .grille-recettes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .carte-recette h3 {
+        font-size: 19px;
+        margin: 10px 10px 4px;
+    }
+
+    .carte-recette p {
+        font-size: 12px;
+        margin: 0 10px 12px;
+    }
+
+    .fiche {
+        padding: 35px 0;
+    }
+
+    .fiche h2 {
+        font-size: 31px;
+    }
+
+    #fiche-image {
+        max-width: 240px;
+    }
+
+    .table-ingredients {
+        font-size: 13px;
+    }
+
+    .table-ingredients th,
+    .table-ingredients td {
+        padding: 9px 5px;
+    }
+
+    #form-recette {
+        grid-template-columns: 1fr;
+    }
+
+    .champ-large,
+    #form-recette button,
+    #message-form {
+        grid-column: auto;
+    }
+}
+
+
+/* TRÈS PETITS ÉCRANS */
+@media (max-width: 360px) {
+
+    .conteneur {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .bouton-theme {
+        padding: 6px 8px;
+        font-size: 9px;
+    }
+
+    .banniere-texte h1 {
+        font-size: 31px;
+    }
+
+    .grille-recettes {
+        grid-template-columns: 1fr;
+    }
+
+    .pied-colonnes {
+        grid-template-columns: 1fr;
+    }
+
+    .pied-colonne:first-child {
+        grid-column: auto;
+    }
+}
+

@@ -220,3 +220,50 @@ body.sombre .carte-liens a {
         font-size: 24px;
     }
 }
+
+/* Prix détaillés des spécialités */
+
+.restaurant-prix-plats {
+    margin: 18px 0;
+    padding: 16px;
+    border-radius: 10px;
+    background: #f8f3eb;
+}
+
+.restaurant-prix-plats h4 {
+    margin: 0 0 14px;
+    color: #30231e;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.restaurant-prix-plats ul {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ligne-prix-plat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #e9e0d5;
+    color: #59443a;
+    font-size: 0.9rem;
+}
+
+.ligne-prix-plat:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.ligne-prix-plat strong {
+    color: #a65338;
+    white-space: nowrap;
+}

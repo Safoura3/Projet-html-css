@@ -1,3 +1,4 @@
+
 // Page Restaurants : crée les cartes à partir du fichier JSON
 const grille = document.querySelector("#grille-restaurants");
 const compte = document.querySelector("#compte-restos");
@@ -58,12 +59,41 @@ function afficherRestaurants() {
         fort.textContent = "À goûter :";
         plats.append(fort, " " + r.plats);
 
+        // Prix moyen par personne
         const prix = document.createElement("p");
         prix.className = "carte-prix";
-        if (r.prix !== null) {
+
+        if (r.prix !== null && r.prix !== undefined) {
             prix.textContent = "Prix moyen : " + r.prix + " € par personne";
         } else {
             prix.textContent = "Prix moyen : à venir";
+        }
+
+        // NOUVEAU : affichage des prix détaillés des plats
+        const detailsPrix = document.createElement("div");
+        detailsPrix.className = "restaurant-prix-plats";
+
+        if (Array.isArray(r.prix_plats) && r.prix_plats.length > 0) {
+            const titrePrix = document.createElement("h4");
+            titrePrix.textContent = "Nos spécialités et leurs prix";
+
+            const listePrix = document.createElement("ul");
+
+            r.prix_plats.forEach(function (plat) {
+                const ligne = document.createElement("li");
+                ligne.className = "ligne-prix-plat";
+
+                const nomPlat = document.createElement("span");
+                nomPlat.textContent = plat.nom;
+
+                const montant = document.createElement("strong");
+                montant.textContent = Number(plat.prix).toFixed(2).replace(".", ",") + " €";
+
+                ligne.append(nomPlat, montant);
+                listePrix.appendChild(ligne);
+            });
+
+            detailsPrix.append(titrePrix, listePrix);
         }
 
         const liens = document.createElement("div");
@@ -86,7 +116,8 @@ function afficherRestaurants() {
         itineraire.textContent = "Itinéraire";
         liens.append(itineraire);
 
-        texte.append(cuisine, nom, adresse, plats, prix, liens);
+        // On conserve les éléments d'origine et on ajoute les prix détaillés
+        texte.append(cuisine, nom, adresse, plats, prix, detailsPrix, liens);
         carte.append(image, texte);
         grille.appendChild(carte);
     });
