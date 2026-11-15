@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../css/style.css">
     <script src="../javascript/menu.js" defer></script>
     <script src="../javascript/theme.js" defer></script>
+    <link rel="stylesheet" href="../css/marche.css">
+<script src="../javascript/marche.js" defer></script>
 </head>
 <body>
     <div class="annonce"><a href="budget.html">Nouveau : comparez les restaurants selon votre budget</a></div>
@@ -31,20 +33,157 @@
             <button type="button" class="bouton-theme">Thème sombre ☾</button>
         </div>
     </header>
+<main>
+  <section class="intro">
+    <div class="conteneur">
+      <p class="surtitre">Le Marché</p>
+      <h1>Les ingrédients<br><em>de nos recettes</em></h1>
+      <p>Gombo, fonio, egusi… Découvrez les produits de la cuisine africaine, où les trouver en Île-de-France et les prochains rendez-vous gourmands.</p>
+    </div>
+  </section>
+  <section id="lexique" class="conteneur section-marche">
+  <p class="surtitre">Lexique</p>
+  <h2>Petit dictionnaire des saveurs</h2>
 
-    <main>
-      
-        <section class="intro">
-            <div class="conteneur">
-                <p class="surtitre">Le Marché</p>
-                <h1>Les Ingrédients</h1><br>
-                <em>de nos recettes</em>
-                <p>Gombo,fonio,egusi... Decouvrir les produits de la cuisine africaine,</p>
-        </div>
-        </section>
-    
+  <label for="recherche">Rechercher un ingrédient ou un plat</label>
+  <input type="search" id="recherche" placeholder="Ex. : plantain, mafé…">
 
-    </main>
+  <div class="table-defilante">
+    <table class="table-lexique">
+      <thead>
+        <tr>
+          <th scope="col">Ingrédient</th>
+          <th scope="col">Description</th>
+          <th scope="col">On le trouve dans</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Feuilles de ndolè</th>
+          <td>Feuilles amères de vernonia, lavées plusieurs fois avant cuisson.</td>
+          <td>Ndolè</td>
+        </tr>
+        <tr>
+          <th scope="row">Plantain</th>
+          <td>Grosse banane à cuire : verte, elle est ferme ; noire, elle est sucrée et parfaite frite.</td>
+          <td>Alloco, kelewele, poulet DG</td>
+        </tr>
+        <tr>
+          <th scope="row">Manioc</th>
+          <td>Tubercule riche en amidon, consommé bouilli, pilé ou fermenté.</td>
+          <td>Miondo, attiéké, fufu</td>
+        </tr>
+        <tr>
+          <th scope="row">Attiéké</th>
+          <td>Semoule de manioc fermentée, légère et acidulée, typique de Côte d'Ivoire.</td>
+          <td>Garba, attiéké poisson braisé</td>
+        </tr>
+        <tr>
+          <th scope="row">Taro</th>
+          <td>Tubercule à la chair ferme, pilé pour former une pâte élastique.</td>
+          <td>Taro sauce jaune</td>
+        </tr>
+        <tr>
+          <th scope="row">Huile de palme</th>
+          <td>Huile rouge-orangé au goût puissant, base de nombreuses sauces.</td>
+          <td>Sauce jaune, eru, sauce graine</td>
+        </tr>
+        <tr>
+          <th scope="row">Gombo</th>
+          <td>Légume vert qui donne une texture onctueuse et filante aux sauces.</td>
+          <td>Sauce gombo, soupes</td>
+        </tr>
+        <tr>
+          <th scope="row">Fonio</th>
+          <td>Petite céréale ancienne d'Afrique de l'Ouest, sans gluten, qui cuit très vite.</td>
+          <td>Accompagnements, desserts</td>
+        </tr>
+        <tr>
+          <th scope="row">Fleurs d'hibiscus</th>
+          <td>Calices séchés au goût acidulé, utilisés pour les boissons.</td>
+          <td>Bissap</td>
+        </tr>
+        <tr>
+          <th scope="row">Pâte d'arachide</th>
+          <td>Cacahuètes grillées et moulues, pour des sauces riches et onctueuses.</td>
+          <td>Mafé, ndolè</td>
+        </tr>
+        <tr>
+          <th scope="row">Egusi</th>
+          <td>Graines de courge décortiquées et moulues, qui épaississent les sauces.</td>
+          <td>Soupe egusi</td>
+        </tr>
+        <tr>
+          <th scope="row">Eru (okok)</th>
+          <td>Feuilles sauvages coupées en fines lanières, très appréciées dans l'ouest du Cameroun.</td>
+          <td>Eru</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p id="aucun-ingredient" hidden>Aucun ingrédient ne correspond à votre recherche.</p>
+</section>
+<section id="acheter" class="section-marche fond-doux">
+  <div class="conteneur">
+    <p class="surtitre">Où acheter</p>
+    <h2>Faire son marché en Île-de-France</h2>
+
+    <div class="grille-adresses">
+      <article class="carte-adresse">
+        <img src="../img/marche/epicerie-1.jpg" alt="Étals de fruits et légumes au Marché Dejean, rue Dejean à Paris">
+        <p class="carte-type">Marché</p>
+        <h3>Marché Dejean</h3>
+        <p>Rue Dejean · Paris 18e (Château Rouge)</p>
+        <p>Poissons, plantains, manioc, épices et feuilles fraîches.</p>
+      </article>
+
+      <article class="carte-adresse">
+        <img src="../img/marche/epicerie-2.jpg" alt="Devanture de l'épicerie Koyaka Market">
+        <p class="carte-type">Épicerie</p>
+        <h3>Koyaka Market</h3>
+        <p>47 rue Myrha · Paris 18e</p>
+        <p>À compléter après vérification.</p>
+      </article>
+
+      <article class="carte-adresse">
+        <img src="../img/marche/epicerie-3.webp" alt="Rayon de produits africains de la cantine-épicerie Soré">
+        <p class="carte-type">Épicerie</p>
+        <h3>Soré</h3>
+        <p>Adresse à compléter · Paris 10e (Canal Saint-Martin)</p>
+        <p>À compléter après vérification.</p>
+      </article>
+    </div>
+  </div>
+</section>
+<section id="agenda" class="conteneur section-marche">
+  <p class="surtitre">Agenda</p>
+  <h2>Les prochains rendez-vous</h2>
+
+  <ul class="agenda">
+    <li>
+      <time class="agenda-date" datetime="2026-11-28">28 nov.</time>
+      <div>
+        <h3>Marché de Noël Africain (15e édition)</h3>
+        <p>MAS, Paris 13e · Mode, artisanat, ateliers et parcours gourmand autour des cuisines africaines, entrée gratuite.</p>
+      </div>
+    </li>
+    <li>
+      <time class="agenda-date" datetime="2026-12-12">12 déc.</time>
+      <div>
+        <h3>Salon Made In Africa</h3>
+        <p>Espace MAS, Paris 13e · Mode, décoration, cosmétiques et épicerie fine africaine, idéal pour les cadeaux de Noël.</p>
+      </div>
+    </li>
+    <li>
+      <time class="agenda-date" datetime="2027-05-06">6 mai</time>
+      <div>
+        <h3>Foire d'Afrique Paris</h3>
+        <p>Espace MAS, Paris 13e · Du 6 au 8 mai, grand marché africain avec artisanat et village gastronomique.</p>
+      </div>
+    </li>
+  </ul>
+</section>
 
     <footer class="pied">
         <div class="conteneur pied-colonnes">
