@@ -1,0 +1,228 @@
+/* 1. Sections */
+.section-marche {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.section-marche h2 {
+  font-size: 40px;
+  margin: 0 0 24px;
+}
+
+.fond-doux {
+  background-color: var(--fond-doux);
+}
+
+/* 2. Champ de recherche */
+#recherche {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  margin: 8px 0 24px;
+  padding: 12px 16px;
+  border: 1px solid var(--trait);
+  border-radius: 24px;
+  background-color: var(--fond);
+  color: var(--texte);
+  font-family: inherit;
+  font-size: 16px;
+}
+/* 2. Le tableau */
+.table-defilante {
+  overflow-x: auto;
+}
+
+.table-lexique {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+}
+
+.table-lexique th,
+.table-lexique td {
+  text-align: left;
+  vertical-align: top;
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--trait);
+}
+
+.table-lexique thead th {
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--texte-doux);
+}
+
+.table-lexique tbody tr:nth-child(even) {
+  background-color: var(--fond-doux);
+}
+
+.table-lexique th[scope="row"] {
+  font-family: var(--police-titre);
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+/* 3. Adresses */
+.grille-adresses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.carte-adresse {
+  background-color: var(--fond);
+  border: 1px solid var(--trait);
+}
+
+.carte-adresse img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.carte-adresse h3,
+.carte-adresse p {
+  padding: 0 20px;
+}
+
+.carte-adresse p:last-child {
+  padding-bottom: 20px;
+}
+
+.carte-type {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 16px;
+}
+
+/* 3. Agenda */
+.agenda {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.agenda li {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--trait);
+}
+
+.agenda-date {
+  flex: 0 0 96px;
+  text-align: center;
+  padding: 14px 8px;
+  background-color: var(--accent);
+  color: var(--sur-accent);
+  font-family: var(--police-titre);
+  font-size: 22px;
+}
+
+.agenda h3 {
+  margin: 0 0 4px;
+  font-size: 24px;
+}
+/* Le tableau */
+.table-defilante {
+  overflow-x: auto;
+}
+
+.table-lexique {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+}
+
+.table-lexique th,
+.table-lexique td {
+  text-align: left;
+  vertical-align: top;
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--trait);
+}
+
+.table-lexique thead th {
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--texte-doux);
+}
+
+.table-lexique tbody tr:nth-child(even) {
+  background-color: var(--fond-doux);
+}
+
+.table-lexique th[scope="row"] {
+  font-family: var(--police-titre);
+  font-size: 20px;
+  white-space: nowrap;
+}
+/* Adresses */
+.grille-adresses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.carte-adresse {
+  background-color: var(--fond);
+  border: 1px solid var(--trait);
+}
+
+.carte-adresse img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.carte-adresse h3,
+.carte-adresse p {
+  padding: 0 20px;
+}
+
+.carte-adresse p:last-child {
+  padding-bottom: 20px;
+}
+
+.carte-type {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 16px;
+}
+
+/* Agenda */
+.agenda {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.agenda li {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--trait);
+}
+
+.agenda-date {
+  flex: 0 0 96px;
+  text-align: center;
+  padding: 14px 8px;
+  background-color: var(--accent);
+  color: var(--sur-accent);
+  font-family: var(--police-titre);
+  font-size: 22px;
+}
+
+.agenda h3 {
+  margin: 0 0 4px;
+  font-size: 24px;
+}
