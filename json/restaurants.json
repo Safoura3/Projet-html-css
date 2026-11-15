@@ -1,0 +1,79 @@
+[
+    {
+        "nom": "Le Bois d'Ébène",
+        "cuisine": "camerounaise",
+        "groupe": "Camerounaise",
+        "adresse": "4 rue André del Sarte",
+        "ville": "Paris 18e",
+        "plats": "capitaine grillé, mafé, ndolè",
+        "prix": null,
+        "site": "",
+        "image": "../img/plats/ndole.jpg"
+    },
+    {
+        "nom": "Le Petit Dakar",
+        "cuisine": "sénégalaise",
+        "groupe": "Sénégalaise",
+        "adresse": "6 rue Elzévir",
+        "ville": "Paris 3e",
+        "plats": "yassa, mafé, thiéboudienne",
+        "prix": null,
+        "site": "",
+        "image": "../img/plats/thieboudienne.jpg"
+    },
+    {
+        "nom": "Waly Fay",
+        "cuisine": "sénégalaise",
+        "groupe": "Sénégalaise",
+        "adresse": "6 rue Godefroy-Cavaignac",
+        "ville": "Paris 11e",
+        "plats": "mafé aux légumes, ndolè",
+        "prix": null,
+        "site": "",
+        "image": "../img/plats/mafe.jpg"
+    },
+    {
+        "nom": "Ohinéné",
+        "cuisine": "ivoirienne",
+        "groupe": "Ivoirienne",
+        "adresse": "14 rue de la Chine",
+        "ville": "Paris 20e",
+        "plats": "attiéké, pintade kedjenou",
+        "prix": null,
+        "site": "",
+        "image": "../img/plats/kedjenou.jpg"
+    },
+    {
+        "nom": "Villa Maasaï",
+        "cuisine": "béninoise",
+        "groupe": "Autres",
+        "adresse": "9 boulevard des Italiens",
+        "ville": "Paris 2e",
+        "plats": "poulet DG revisité, yassa",
+        "prix": null,
+        "site": "",
+        "image": "../img/plats/poulet-dg.jpg"
+    },
+    {
+        "nom": "Osè",
+        "cuisine": "ouest-africaine",
+        "groupe": "Autres",
+        "adresse": "34 rue du Faubourg Saint-Martin",
+        "ville": "Paris 10e",
+        "plats": "bols mafé ou yassa, alloco",
+        "prix": null,
+        "site": "",
+        "image": "../img/plats/alloco.jpg"
+    },
+    {
+        "nom": "Folie-Bamako",
+        "cuisine": "ouest-africaine",
+        "groupe": "Autres",
+        "adresse": "40 rue Jean-Pierre Timbaud",
+        "ville": "Paris 11e",
+        "plats": "mafé fumé, alloco",
+        "prix": null,
+        "site": "",
+        "image": "../img/plats/yassa-au-poulet.jpg"
+    }
+]

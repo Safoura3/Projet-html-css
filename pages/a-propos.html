@@ -10,9 +10,18 @@
 
     <title>À propos | Mboa Kitchen</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/apropos.css">
+
     <script defer src="../javascript/apropos.js"></script>
+
+
+    <script src="../javascript/menu.js" defer></script>
+    <script src="../javascript/theme.js" defer></script>
+    <script defer src="../javascript/formulaire.js"></script>
 
 </head>
 
@@ -338,6 +347,108 @@
             </div>
 
         </section>
+                <!-- CONTACT -->
+        <section class="apropos-contact" id="contact">
+
+            <div class="contact-entete">
+
+                <p class="surtitre">RESTONS EN CONTACT</p>
+
+                <h2>
+                    Une question, une idée,<br>
+                    <em>une envie de partager ?</em>
+                </h2>
+
+                <p>
+                    Une suggestion, une question ou une proposition
+                    de collaboration ? Nous serions ravies de vous lire.
+                </p>
+
+            </div>
+
+            <div class="contact-contenu">
+
+                <div class="contact-invitation">
+
+                    <span class="contact-numero">01 — ÉCHANGEONS</span>
+
+                    <h3>
+                        Chaque belle rencontre commence par un message.
+                    </h3>
+
+                    <p>
+                        Mboa Kitchen est un projet construit autour
+                        de la découverte, de la transmission et du partage.
+                        Vos idées contribuent à le faire grandir.
+                    </p>
+
+                    <span class="contact-signature">
+                        L'équipe Mboa Kitchen
+                    </span>
+
+                </div>
+
+                <form class="contact-formulaire"
+                      id="formulaire-contact"
+                      novalidate>
+
+                    <div class="contact-champ">
+                        <label for="contact-nom">Votre nom</label>
+                        <input type="text"
+                               id="contact-nom"
+                               name="nom"
+                               placeholder="Ex. : Amina"
+                               autocomplete="name"
+                               required>
+                    </div>
+
+                    <div class="contact-champ">
+                        <label for="contact-email">Votre adresse e-mail</label>
+                        <input type="email"
+                               id="contact-email"
+                               name="email"
+                               placeholder="vous@exemple.com"
+                               autocomplete="email"
+                               required>
+                    </div>
+
+                    <div class="contact-champ">
+                        <label for="contact-sujet">Le sujet de votre message</label>
+
+                        <select id="contact-sujet" name="sujet" required>
+                            <option value="">Choisissez un sujet</option>
+                            <option value="Question">Une question</option>
+                            <option value="Suggestion">Une suggestion</option>
+                            <option value="Partenariat">Une proposition de partenariat</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="contact-champ">
+                        <label for="contact-message">Votre message</label>
+
+                        <textarea id="contact-message"
+                                  name="message"
+                                  rows="5"
+                                  placeholder="Écrivez-nous quelques mots..."
+                                  required></textarea>
+                    </div>
+
+                    <button type="submit" class="contact-bouton">
+                        Préparer mon message
+                        <span aria-hidden="true">↗</span>
+                    </button>
+
+                    <p class="contact-retour"
+                       id="contact-retour"
+                       role="status"
+                       aria-live="polite"></p>
+
+                </form>
+
+            </div>
+
+        </section>
 
     </main>
 
@@ -380,9 +491,10 @@
                 <h2 class="pied-titre">Nous</h2>
 
                 <ul>
-                    <li><a href="a-propos.html">À propos</a></li>
-                    <li><a href="#equipe">L'équipe</a></li>
-                </ul>
+    <li><a href="a-propos.html">À propos</a></li>
+    <li><a href="#equipe">L'équipe</a></li>
+    <li><a href="#contact">Nous contacter</a></li>
+</ul>
 
             </div>
 

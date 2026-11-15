@@ -1,0 +1,222 @@
+/* ===== Page Restaurants ===== */
+
+/* En-tête de la page */
+.entete-page h1 {
+    line-height: 1.05;
+    margin-bottom: 20px;
+}
+
+.entete-page h1 em {
+    color: #8a6238;
+}
+
+.entete-page-texte {
+    max-width: 620px;
+    color: #6b625b;
+}
+
+/* Filtres */
+.section-restos {
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+.barre-filtres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.filtres-cuisine {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filtre-cuisine {
+    padding: 9px 20px;
+    font-family: "Jost", sans-serif;
+    font-size: 14px;
+    border: 1px solid #e8e1d9;
+    border-radius: 30px;
+    background-color: white;
+    color: #1f1a17;
+    cursor: pointer;
+}
+
+.filtre-cuisine:hover {
+    border-color: #8a6238;
+}
+
+.filtre-cuisine.actif {
+    background-color: #1f1a17;
+    border-color: #1f1a17;
+    color: white;
+}
+
+.compte-restos {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #6b625b;
+}
+
+/* Grille des cartes (remplie par le JavaScript) */
+.grille-restaurants {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 28px;
+}
+
+.carte-restaurant {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e8e1d9;
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carte-restaurant:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(31, 26, 23, 0.08);
+}
+
+.carte-restaurant-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.carte-restaurant-texte {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 22px;
+}
+
+.carte-restaurant h3 {
+    font-size: 28px;
+    margin: 6px 0 4px;
+}
+
+.carte-adresse {
+    font-size: 14px;
+    color: #6b625b;
+}
+
+.carte-plats {
+    margin-top: 12px;
+    font-size: 15px;
+}
+
+.carte-plats strong {
+    font-weight: 500;
+    color: #8a6238;
+}
+
+.carte-prix {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #6b625b;
+}
+
+.carte-liens {
+    display: flex;
+    gap: 20px;
+    margin-top: auto;
+    padding-top: 18px;
+}
+
+.carte-liens a {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #1f1a17;
+    padding-bottom: 2px;
+}
+
+.carte-liens a:hover {
+    color: #8a6238;
+    border-color: #8a6238;
+}
+
+.aucun-resto {
+    padding: 40px 0;
+    text-align: center;
+    color: #6b625b;
+}
+
+/* Bandeau vers le comparateur */
+.bandeau-budget {
+    background-color: #8a6238;
+    color: white;
+    padding: 40px 0;
+}
+
+.bandeau-budget .conteneur {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.bandeau-budget p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+}
+
+/* Thème sombre */
+body.sombre .entete-page-texte,
+body.sombre .carte-adresse,
+body.sombre .carte-prix,
+body.sombre .compte-restos,
+body.sombre .aucun-resto {
+    color: #b8aea4;
+}
+
+body.sombre .entete-page h1 em,
+body.sombre .carte-plats strong {
+    color: #d9a566;
+}
+
+body.sombre .filtre-cuisine,
+body.sombre .carte-restaurant {
+    background-color: #17120f;
+    color: #f3ece4;
+    border-color: #3a312a;
+}
+
+body.sombre .filtre-cuisine.actif {
+    background-color: #f3ece4;
+    border-color: #f3ece4;
+    color: #17120f;
+}
+
+body.sombre .carte-liens a {
+    border-color: #f3ece4;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+    .barre-filtres {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .grille-restaurants {
+        grid-template-columns: 1fr;
+    }
+
+    .bandeau-budget .conteneur {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bandeau-budget p {
+        font-size: 24px;
+    }
+}
