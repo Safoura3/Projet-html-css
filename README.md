@@ -23,7 +23,7 @@ Projet de groupe du module **TI504N – Programmation Web** (Efrei Paris, 2026-2
 
 ## Maquette
 
-La maquette du site (wireframe de chaque page, palette de couleurs, typographies, thèmes clair et sombre) a été réalisée avant le développement et est fournie avec le livrable sur Moodle.
+La maquette du site a été réalisée avant le développement : [`Maquette_site.docx`](Maquette_site.docx), à la racine du dépôt. Elle présente le wireframe de chaque page, la palette de couleurs, les typographies et les thèmes clair et sombre.
 
 ## Fonctionnalités JavaScript
 
@@ -73,6 +73,8 @@ La maquette du site (wireframe de chaque page, palette de couleurs, typographies
 
 ```
 index.html
+README.md
+Maquette_site.docx
 css/          feuilles de style (style.css commun + une par page)
 javascript/   scripts (chargés avec defer)
 json/         données des recettes et des restaurants
