@@ -23,7 +23,7 @@ Projet de groupe du module **TI504N – Programmation Web** (Efrei Paris, 2026-2
 
 ## Maquette
 
-La maquette du site a été réalisée avant le développement : [`Maquette_site.docx`](Maquette_site.docx), à la racine du dépôt. Elle présente le wireframe de chaque page, la palette de couleurs, les typographies et les thèmes clair et sombre.
+Le plan du site est fourni dans [`Maquette_site.docx`](Maquette_site.docx), à la racine du dépôt : arborescence sur 2 niveaux (niveau 0 : accueil, niveau 1 : pages principales, niveau 2 : sous-pages et sections).
 
 ## Fonctionnalités JavaScript
 
