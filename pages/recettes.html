@@ -8,13 +8,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap">
     <link rel="stylesheet" href="../css/style.css">
-    <script  defer src="../javascript/recettes.js"></script>
+    <link rel="stylesheet" href="../css/recettes.css">
+    <script src="../javascript/recettes.js" defer></script>
+    <script src="../javascript/formulaire.js" defer></script>
     <script src="../javascript/menu.js" defer></script>
+    <script src="../javascript/proposition.js" defer></script>
     <script src="../javascript/theme.js" defer></script>
 </head>
 <body>
-
-     
 
     <div class="annonce"><a href="budget.html">Nouveau : comparez les restaurants selon votre budget</a></div>
 
@@ -39,81 +40,105 @@
     <main>
         <section class="intro">
             <div class="conteneur">
-                <p class="surtitre">Des plats d'Afrique centrale et de l'Ouest, expliqués pas à pas. Filtrez par pays, puis choisissez une recette pour voir les ingrédients et les étapes.</p>
+                <p class="surtitre">Recettes</p>
                 <h1>Cuisinez l'Afrique chez vous</h1>
+                <p>Des plats d'Afrique centrale et de l'Ouest, expliqués pas à pas. Filtrez par pays, puis choisissez une recette pour voir les ingrédients et les étapes.</p>
             </div>
         </section>
+
         <section id="filtres" class="conteneur filtres">
             <h2 class="visuellement-cache">Filtrer les recettes</h2>
             <div class="filtre-pays">
                 <button type="button" class="filtre actif" aria-pressed="true" data-pays="Tous">Tous</button>
-                <button type="button" class="filtre " aria-pressed="false" data-pays="Cameroun">Cameroun</button>
-                <button type="button" class="filtre " aria-pressed="false" data-pays="Sénégal" >Sénégal</button>
-
-                <button type="button" class="filtre " aria-pressed="false"data-pays="Côte d'Ivoire">Côte d'Ivoire</button>
-                <button type="button" class="filtre " aria-pressed="false" data-pays="Côte d'Ivoire">Côte d'Ivoire</button>
-
-                <button type="button" class="filtre " aria-pressed="false" data-pays="Nigeria">Nigeria</button>
-                <button type="button" class="filtre " aria-pressed="false" data-pays="RD Congo">RD Congo</button>
-                </div>
-                <label class="filtre-vege">
-                  <input type="checkbox"  id="filtre-vege">Végétarien uniquement
-                </label>
+                <button type="button" class="filtre" aria-pressed="false" data-pays="Cameroun">Cameroun</button>
+                <button type="button" class="filtre" aria-pressed="false" data-pays="Sénégal">Sénégal</button>
+                <button type="button" class="filtre" aria-pressed="false" data-pays="Côte d'Ivoire">Côte d'Ivoire</button>
+                <button type="button" class="filtre" aria-pressed="false" data-pays="Nigeria">Nigeria</button>
+                <button type="button" class="filtre" aria-pressed="false" data-pays="RD Congo">RD Congo</button>
+            </div>
+            <label class="filtre-vege">
+                <input type="checkbox" id="filtre-vege">Végétarien uniquement
+            </label>
         </section>
-        <section id="Liste" class="conteneur">
+
+        <section id="liste" class="conteneur">
             <h2 class="visuellement-cache">Liste des recettes</h2>
-            <div id="grille-recettes" class="grille-recettes">
-                <p id="aucune-recette" hidden>Aucune recette ne correspond à ces filtres pour l'instant </p>
-            </div>
+            <div id="grille-recettes" class="grille-recettes"></div>
+        <p id="aucune-recette" hidden>Aucune recette ne correspond à ces filtres pour l'instant.</p>
+            
         </section>
+
         <section id="fiche" class="fiche">
-            <div class="conteneur fiche-contenu"> 
+            <div class="conteneur fiche-contenu">
                 <img id="fiche-image" src="../img/plats/ndole.jpg" alt="">
-            </div>
-            <div class="fiche-texte">
-                <p id="fiche-pays" class="surtitre"></p>
-                <h2 id="fiche-nom"></h2>
-                <p id="fiche-description"></p>
-                <p id="fiche-infos" class="fiche-infos">temps et piment</p>
-                <div class="portions">Portions</div>
-                <button type="button" id="portions-moins" aria-label="Une portion de moins">-</button>
-                <span id="nb-portions">4</span>
-                <button type="button" id="portions-plus" aria-label="Une portion de plus">+</button></div>
-                <table class="table-ingredients">
-                    <caption>Ingrédients</caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">Ingrédients</th>
-                             <th scope="col">Quantité</th>
-                        </tr>
-                    </thead>
-                    <tbody id="fiche-ingredients"></tbody>
-                </table>
-                <h3>Etapes</h3>
-                <ol id="fiche-etapes"></ol>
+                <div class="fiche-texte">
+                    <p id="fiche-pays" class="surtitre"></p>
+                    <h2 id="fiche-nom"></h2>
+                    <p id="fiche-description"></p>
+                    <p id="fiche-infos" class="fiche-infos"></p>
+
+                    <div class="portions">
+                        <span>Portions</span>
+                        <button type="button" id="portions-moins" aria-label="Une portion de moins">−</button>
+                        <span id="nb-portions">4</span>
+                        <button type="button" id="portions-plus" aria-label="Une portion de plus">+</button>
+                    </div>
+
+                    <table class="table-ingredients">
+                        <caption>Ingrédients</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Ingrédient</th>
+                                <th scope="col">Quantité</th>
+                            </tr>
+                        </thead>
+                        <tbody id="fiche-ingredients"></tbody>
+                    </table>
+
+                    <h3>Étapes</h3>
+                    <ol id="fiche-etapes"></ol>
+                </div>
             </div>
         </section>
+
         <section id="proposer" class="conteneur proposer">
             <h2>Proposer votre recette</h2>
-            <p>Un plat de famille à partager? Envoyez-le, il sera peut-être le prochain plat du jour.</p>
-        <form id="form-recette" novalidate>
-        <div class="champ"> 
-            <label for="texte-recette" ></label>
-            <textarea id="texte-recette" class="champ champ-large"></textarea>
-            
-        </div>
+            <p>Un plat de famille à partager ? Envoyez-le, il sera peut-être le prochain plat du jour.</p>
+
+            <form id="form-recette" novalidate>
+                <div class="champ">
+                    <label for="nom">Votre nom</label>
+                    <input type="text" id="nom" name="nom">
+                </div>
+                <div class="champ">
+                    <label for="email">Votre e-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="champ">
+                    <label for="plat">Nom du plat</label>
+                    <input type="text" id="plat" name="plat">
+                </div>
+                <div class="champ">
+                    <label for="pays">Pays</label>
+                    <select id="pays" name="pays">
+                        <option value="">Choisir un pays</option>
+                        <option value="Cameroun">Cameroun</option>
+                        <option value="Côte d'Ivoire">Côte d'Ivoire</option>
+                        <option value="Sénégal">Sénégal</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </div>
+                <div class="champ champ-large">
+                    <label for="texte">Votre recette</label>
+                    <textarea id="texte" name="texte" rows="6"></textarea>
+                </div>
+
+                <button type="submit" class="bouton-plein">Envoyer ma recette</button>
+                <p id="message-form" aria-live="polite"></p>
+            </form>
         </section>
-        <select>
-            <option value="">Chosir un pays</option>
-            <option value="Cameroun" >Cameroun</option>
-            <option value="Côte d'Ivoire">Côte d'Ivoire</option>
-            <option value="Sénégal">Sénégal</option>
-            <option value="Autre">Autre</option>
-        </select>
-        <button type="submit" class="bouton-plein">Envoyer ma recette</button>
-        <p id="message-form" aria-live="polite"></p>
-        </form>
     </main>
+
     <footer class="pied">
         <div class="conteneur pied-colonnes">
             <div class="pied-colonne">

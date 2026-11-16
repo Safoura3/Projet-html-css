@@ -38,3 +38,58 @@ La maquette du site (wireframe de chaque page, palette de couleurs, typographies
 - Validation des formulaires (proposition de recette, contact)
 
 ## Structure du projet
+## Partie de Keren : Recettes et Le Marché
+
+### Pages
+
+- **`pages/recettes.html`** : la page Recettes affiche les plats sous forme de cartes, filtrables par pays et par option végétarienne. En cliquant sur une carte, on ouvre la fiche du plat (image, description, temps, piment, étapes) avec un tableau d'ingrédients dont les quantités s'adaptent au nombre de portions. Un formulaire permet aussi de proposer sa propre recette.
+- **`pages/marche.html`** : la page Le Marché présente les produits de la cuisine africaine en trois sections : un lexique des ingrédients avec recherche en direct, des adresses où acheter en Île-de-France, et un agenda de trois rendez-vous à venir.
+
+### Fichiers JavaScript
+
+- **`javascript/recettes.js`** : charge `json/recettes.json` avec `fetch`, construit les cartes avec `createElement`, applique les filtres par pays et végétarien, remplit la fiche et recalcule les quantités selon les portions (règle de trois sur une base de 4 personnes).
+- **`javascript/formulaire.js`** : valide le formulaire « Proposer votre recette » à l'envoi. `preventDefault()` bloque le rechargement, chaque champ est vérifié, et un message d'erreur ou de remerciement s'affiche.
+- **`javascript/marche.js`** : filtre les lignes du lexique à chaque lettre tapée dans le champ de recherche, sans tenir compte des majuscules ni des accents, et affiche un message si aucun ingrédient ne correspond.
+
+### Données et styles
+
+- **`json/recettes.json`** : les recettes (nom, pays, temps, piment, ingrédients, étapes), séparées du HTML pour pouvoir les modifier sans toucher au code.
+- **`css/recettes.css`** et **`css/marche.css`** : styles des deux pages, qui utilisent les variables de couleur de `style.css` pour s'adapter au thème sombre.
+
+### Sources de l'agenda (Le Marché)
+
+- Marché de Noël Africain, 28 novembre 2026 : lemarchedenoelafricain.com et calendrier des marchés de Noël de la Ville de Paris.
+- Salon Made In Africa, 12 décembre 2026 : dreamteamafrica.com.
+- Foire d'Afrique Paris, 6 au 8 mai 2027 : foiredafrique.fr.
+
+
+
+### Pages
+
+- **`pages/recettes.html`** : la page Recettes affiche les plats sous forme de cartes, filtrables par pays et par option végétarienne. En cliquant sur une carte, on ouvre la fiche du plat (image, description, temps, piment, étapes) avec un tableau d'ingrédients dont les quantités s'adaptent au nombre de portions. Un formulaire permet aussi de proposer sa propre recette.
+- **`pages/marche.html`** : la page Le Marché présente les produits de la cuisine africaine en trois sections : un lexique des ingrédients avec recherche en direct, des adresses où acheter en Île-de-France, et un agenda de trois rendez-vous à venir.
+
+### Fichiers JavaScript
+
+- **`javascript/recettes.js`** : charge `json/recettes.json` avec `fetch`, construit les cartes avec `createElement`, applique les filtres par pays et végétarien, remplit la fiche et recalcule les quantités selon les portions (règle de trois sur une base de 4 personnes).
+- **`javascript/formulaire.js`** : valide le formulaire « Proposer votre recette » à l'envoi. `preventDefault()` bloque le rechargement, chaque champ est vérifié, et un message d'erreur ou de remerciement s'affiche.
+- **`javascript/marche.js`** : filtre les lignes du lexique à chaque lettre tapée dans le champ de recherche, sans tenir compte des majuscules ni des accents, et affiche un message si aucun ingrédient ne correspond.
+
+### Données et styles
+
+- **`json/recettes.json`** : les recettes (nom, pays, temps, piment, ingrédients, étapes), séparées du HTML pour pouvoir les modifier sans toucher au code.
+- **`css/recettes.css`** et **`css/marche.css`** : styles des deux pages, qui utilisent les variables de couleur de `style.css` pour s'adapter au thème sombre.
+
+### Sources de l'agenda (Le Marché)
+
+- Marché de Noël Africain, 28 novembre 2026 : lemarchedenoelafricain.com et calendrier des marchés de Noël de la Ville de Paris.
+- Salon Made In Africa, 12 décembre 2026 : dreamteamafrica.com.
+- Foire d'Afrique Paris, 6 au 8 mai 2027 : foiredafrique.fr.
+
+### Crédits photos (Le Marché)
+
+| Photo | Auteur | Licence | Lien |
+|---|---|---|---|
+| "img/marche/epicerie-1.jpg"| altasobscura.com  | licence CC-BY-SA| https://img.atlasobscura.com/PagDBc50qx2WY-tKA-epximtdNg6JgZjGHKlLlNkThQ/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8zYzI3/OTAyOTQ3MzBhNzQ1/NTNfMjAyMzEyX1Bh/cmlzX0ZyYW5jZS0y/NjU3LmpwZw.jpg|
+| "img/marche/epicerie-2.jpg"|716lavie.com | licence CC-BY-SA| https://716lavie.com/wp-content/uploads/2021/09/Koyaka-kitchen-75018-paris-716lavie.jpg|
+| "img/marche/epicerie-3.jpg" | maison-sore.com| licence CC-BY-SA| https://maison-sore.com/cdn/shop/files/6027x3616_cover_d33f89a104bc4fd5ac48deed61b1ae35.jpg?v=1706306364&width=832|
