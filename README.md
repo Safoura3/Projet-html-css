@@ -37,59 +37,75 @@ La maquette du site (wireframe de chaque page, palette de couleurs, typographies
 - Calculateur de budget
 - Validation des formulaires (proposition de recette, contact)
 
+## Détail par membre
+
+### Safoura : Accueil, Restaurants et socle commun
+
+- **`index.html`** et **`pages/restaurants.html`** : structure des deux pages ; header et footer communs à toutes les pages.
+- **`css/style.css`** : charte commune (couleurs, polices, boutons, header, footer, accueil, thème sombre, responsive) ; **`css/restaurants.css`** : styles de la page Restaurants.
+- **`javascript/menu.js`** (menu burger), **`theme.js`** (thème clair / sombre), **`hasard.js`** (plat au hasard), **`carrousel.js`** (carrousel de l'accueil), **`restaurants.js`** (cartes, filtres et itinéraires des restaurants).
+- **`json/restaurants.json`** : les restaurants (nom, cuisine, adresse, plats, prix, image).
+
+### Keren : Recettes et Le Marché
+
+**Pages**
+
+- **`pages/recettes.html`** : les plats sont affichés sous forme de cartes, filtrables par pays et par option végétarienne. En cliquant sur une carte, on ouvre la fiche du plat (image, description, temps, piment, étapes) avec un tableau d'ingrédients dont les quantités s'adaptent au nombre de portions. Un formulaire permet aussi de proposer sa propre recette.
+- **`pages/marche.html`** : les produits de la cuisine africaine en trois sections : un lexique des ingrédients avec recherche en direct, des adresses où acheter en Île-de-France, et un agenda de trois rendez-vous à venir.
+
+**Fichiers JavaScript**
+
+- **`javascript/recettes.js`** : charge `json/recettes.json` avec `fetch`, construit les cartes avec `createElement`, applique les filtres par pays et végétarien, remplit la fiche et recalcule les quantités selon les portions (règle de trois sur une base de 4 personnes).
+- **`javascript/formulaire.js`** : valide le formulaire « Proposer votre recette » à l'envoi. `preventDefault()` bloque le rechargement, chaque champ est vérifié, et un message d'erreur ou de remerciement s'affiche.
+- **`javascript/marche.js`** : filtre les lignes du lexique à chaque lettre tapée dans le champ de recherche, sans tenir compte des majuscules ni des accents, et affiche un message si aucun ingrédient ne correspond.
+
+**Données et styles**
+
+- **`json/recettes.json`** : les recettes (nom, pays, temps, piment, ingrédients, étapes), séparées du HTML pour pouvoir les modifier sans toucher au code.
+- **`css/recettes.css`** et **`css/marche.css`** : styles des deux pages, qui utilisent les variables de couleur de `style.css` pour s'adapter au thème sombre.
+
+### Kadidja : Budget et À propos
+
+- **`pages/budget.html`**, **`css/budget.css`**, **`javascript/budget.js`** : calculateur de budget repas.
+- **`pages/a-propos.html`**, **`css/apropos.css`**, **`javascript/apropos.js`** : présentation du projet et de l'équipe, formulaire de contact.
+
 ## Structure du projet
-## Partie de Keren : Recettes et Le Marché
 
-### Pages
+```
+index.html
+css/          feuilles de style (style.css commun + une par page)
+javascript/   scripts (chargés avec defer)
+json/         données des recettes et des restaurants
+img/          logo, icônes, photos des plats et du Marché
+pages/        pages secondaires
+```
 
-- **`pages/recettes.html`** : la page Recettes affiche les plats sous forme de cartes, filtrables par pays et par option végétarienne. En cliquant sur une carte, on ouvre la fiche du plat (image, description, temps, piment, étapes) avec un tableau d'ingrédients dont les quantités s'adaptent au nombre de portions. Un formulaire permet aussi de proposer sa propre recette.
-- **`pages/marche.html`** : la page Le Marché présente les produits de la cuisine africaine en trois sections : un lexique des ingrédients avec recherche en direct, des adresses où acheter en Île-de-France, et un agenda de trois rendez-vous à venir.
+## Lancer le site
 
-### Fichiers JavaScript
+1. Cloner le dépôt : `git clone https://github.com/Safoura3/Projet-html-css.git`
+2. Ouvrir le dossier dans VS Code
+3. Ouvrir `index.html` avec l'extension **Live Server** (obligatoire : les données JSON ne se chargent pas en ouvrant le fichier directement)
 
-- **`javascript/recettes.js`** : charge `json/recettes.json` avec `fetch`, construit les cartes avec `createElement`, applique les filtres par pays et végétarien, remplit la fiche et recalcule les quantités selon les portions (règle de trois sur une base de 4 personnes).
-- **`javascript/formulaire.js`** : valide le formulaire « Proposer votre recette » à l'envoi. `preventDefault()` bloque le rechargement, chaque champ est vérifié, et un message d'erreur ou de remerciement s'affiche.
-- **`javascript/marche.js`** : filtre les lignes du lexique à chaque lettre tapée dans le champ de recherche, sans tenir compte des majuscules ni des accents, et affiche un message si aucun ingrédient ne correspond.
+## Sources et crédits
 
-### Données et styles
+### Agenda (Le Marché)
 
-- **`json/recettes.json`** : les recettes (nom, pays, temps, piment, ingrédients, étapes), séparées du HTML pour pouvoir les modifier sans toucher au code.
-- **`css/recettes.css`** et **`css/marche.css`** : styles des deux pages, qui utilisent les variables de couleur de `style.css` pour s'adapter au thème sombre.
+- Marché de Noël Africain, 28 novembre 2026 : lemarchedenoelafricain.com et calendrier des marchés de Noël de la Ville de Paris
+- Salon Made In Africa, 12 décembre 2026 : dreamteamafrica.com
+- Foire d'Afrique Paris, 6 au 8 mai 2027 : foiredafrique.fr
 
-### Sources de l'agenda (Le Marché)
+### Photos (Le Marché)
 
-- Marché de Noël Africain, 28 novembre 2026 : lemarchedenoelafricain.com et calendrier des marchés de Noël de la Ville de Paris.
-- Salon Made In Africa, 12 décembre 2026 : dreamteamafrica.com.
-- Foire d'Afrique Paris, 6 au 8 mai 2027 : foiredafrique.fr.
+Photos utilisées dans un cadre pédagogique, non commercial ; droits réservés à leurs auteurs.
 
+| Photo | Source |
+|---|---|
+| `img/marche/epicerie-1.jpg` | [atlasobscura.com](https://www.atlasobscura.com) |
+| `img/marche/epicerie-2.jpg` | [716lavie.com](https://716lavie.com/wp-content/uploads/2021/09/Koyaka-kitchen-75018-paris-716lavie.jpg) |
+| `img/marche/epicerie-3.webp` | [maison-sore.com](https://maison-sore.com) |
 
+### Autres
 
-### Pages
-
-- **`pages/recettes.html`** : la page Recettes affiche les plats sous forme de cartes, filtrables par pays et par option végétarienne. En cliquant sur une carte, on ouvre la fiche du plat (image, description, temps, piment, étapes) avec un tableau d'ingrédients dont les quantités s'adaptent au nombre de portions. Un formulaire permet aussi de proposer sa propre recette.
-- **`pages/marche.html`** : la page Le Marché présente les produits de la cuisine africaine en trois sections : un lexique des ingrédients avec recherche en direct, des adresses où acheter en Île-de-France, et un agenda de trois rendez-vous à venir.
-
-### Fichiers JavaScript
-
-- **`javascript/recettes.js`** : charge `json/recettes.json` avec `fetch`, construit les cartes avec `createElement`, applique les filtres par pays et végétarien, remplit la fiche et recalcule les quantités selon les portions (règle de trois sur une base de 4 personnes).
-- **`javascript/formulaire.js`** : valide le formulaire « Proposer votre recette » à l'envoi. `preventDefault()` bloque le rechargement, chaque champ est vérifié, et un message d'erreur ou de remerciement s'affiche.
-- **`javascript/marche.js`** : filtre les lignes du lexique à chaque lettre tapée dans le champ de recherche, sans tenir compte des majuscules ni des accents, et affiche un message si aucun ingrédient ne correspond.
-
-### Données et styles
-
-- **`json/recettes.json`** : les recettes (nom, pays, temps, piment, ingrédients, étapes), séparées du HTML pour pouvoir les modifier sans toucher au code.
-- **`css/recettes.css`** et **`css/marche.css`** : styles des deux pages, qui utilisent les variables de couleur de `style.css` pour s'adapter au thème sombre.
-
-### Sources de l'agenda (Le Marché)
-
-- Marché de Noël Africain, 28 novembre 2026 : lemarchedenoelafricain.com et calendrier des marchés de Noël de la Ville de Paris.
-- Salon Made In Africa, 12 décembre 2026 : dreamteamafrica.com.
-- Foire d'Afrique Paris, 6 au 8 mai 2027 : foiredafrique.fr.
-
-### Crédits photos (Le Marché)
-
-| Photo | Auteur | Licence | Lien |
-|---|---|---|---|
-| "img/marche/epicerie-1.jpg"| altasobscura.com  | licence CC-BY-SA| https://img.atlasobscura.com/PagDBc50qx2WY-tKA-epximtdNg6JgZjGHKlLlNkThQ/rt:fit/h:400/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8zYzI3/OTAyOTQ3MzBhNzQ1/NTNfMjAyMzEyX1Bh/cmlzX0ZyYW5jZS0y/NjU3LmpwZw.jpg|
-| "img/marche/epicerie-2.jpg"|716lavie.com | licence CC-BY-SA| https://716lavie.com/wp-content/uploads/2021/09/Koyaka-kitchen-75018-paris-716lavie.jpg|
-| "img/marche/epicerie-3.jpg" | maison-sore.com| licence CC-BY-SA| https://maison-sore.com/cdn/shop/files/6027x3616_cover_d33f89a104bc4fd5ac48deed61b1ae35.jpg?v=1706306364&width=832|
+- Icônes : [Tabler Icons](https://tabler.io/icons) (licence MIT)
+- Polices : Cormorant Garamond et Jost (Google Fonts)
+- Photos des plats : sources et auteurs listés sur la page À propos
